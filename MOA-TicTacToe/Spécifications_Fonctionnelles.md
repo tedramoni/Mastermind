@@ -15,7 +15,8 @@ Par conséquent, on considère que le gagnant est la personne qui à réussit à
     * Sinon le joueur 2 rentre lui aussi son pseudo
 * La partie commence 
 * Le joueur 1 pose son symbole puis c'est au tour du joueur 2 ou de l'IA.
+  Il doit être affiché à l'écran la grille de jeu et le pseudo de la personne qui doit poser son symbole.
 * Ainsi de suite jusqu'à ce que l'un des deux joeurs réussisse à aligner n symboles (n dépendant de la taille de la grille)
     * Si aucun des deux joueurs ne réussit çela fait un égalité et l'on propose alors aux joueurs de quitter ainsi ou de faire une nouvelle partie (sans avoir besoin de re-saisir les pseudos).
 * Quand le jeu est terminé on propose aux joueurs de recommencer avec les mêmes personnes, contre d'autres personnes ou de quitter.
-    * Si le joeur joue contre l'IA on lui propose de rejouer avec un niveau de difficulté plus important.
+    * Si le joueur joue contre l'IA on lui propose de rejouer avec un niveau de difficulté plus important.
