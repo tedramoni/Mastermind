@@ -11,7 +11,7 @@ Par conséquent, on considère que le gagnant est la personne qui à réussit à
 * Le joueur sélectionne le type de partie qu'il veut joueur (contre un adversaire physique ou contre l'IA) et la taille de la grille
     * Si le joueur à décidé de jouer contre l'IA on lui demande de rentrer la difficulté de l'IA (correspondant à la profondeur de l'algorithme de recherche)
 * Un des deux joueurs rentre son pseudo et se voit affecté automatiquement un symbole
-    * S'il à décidé de joueur contre l'IA la partie commence
+    * S'il à décidé de jouer contre l'IA la partie commence
     * Sinon le joueur 2 rentre lui aussi son pseudo
 * La partie commence 
 * Le joueur 1 pose son symbole puis c'est au tour du joueur 2 ou de l'IA.
