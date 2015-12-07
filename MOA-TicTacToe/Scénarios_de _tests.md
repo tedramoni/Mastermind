@@ -78,21 +78,21 @@
 
 **Déroulement :** Le joueur laisse l'IA gagner
 
-**Résultat attendu :** 
+**Résultat attendu :** L'application notifie la victoire de l'IA, et propose au joueur soit d'augmenter la difficulté de la partie, soit de rejouter la partie, soit de quitter le jeu et de revenir au menu principal.
 
 
-## Scénario n° 
+## Scénario n° 10
 
-**But :** 
+**But :** Test d'une deuxième partie à deux joueurs
 
-**Déroulement :** 
+**Déroulement :** A la fin d'une partie, les deux joueurs décident de rejouer une partie
 
-**Résultat attendu :** 
+**Résultat attendu :** L'application relance une nouvelle partie
 
 
-## Scénario n° 
+## Scénario n° 11
 
-**But :** 
+**But :** Test d'une deuxième partie contre l 'IA
 
 **Déroulement :** 
 
