@@ -8,7 +8,8 @@ Par conséquent, on considère que le gagnant est la personne qui à réussit à
 ## Déroulement d'une partie 
 
 * Un des deux joueurs (ou l'unique joueur s'il veut jouer contre l'IA) lance l'application.
-* Le joueur sélectionne le type de partie qu'il veut jouer (contre un adversaire physique ou contre l'IA) et la taille de la grille
+* Le joueur sélectionne le type de partie qu'il veut jouer (contre un adversaire physique ou contre l'IA).
+* On lui demande ensuite de sélectionner la taille de la grille s'il a choisi de joueur contre un adversaire physique.
     * Si le joueur a décidé de jouer contre l'IA on lui demande de rentrer la difficulté de l'IA (correspondant à la profondeur de l'algorithme de recherche)
 * Un des deux joueurs rentre son pseudo et se voit affecter automatiquement un symbole
     * S'il a décidé de jouer contre l'IA la partie commence
