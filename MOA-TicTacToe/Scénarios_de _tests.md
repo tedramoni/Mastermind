@@ -56,7 +56,7 @@
 
 ## Scénario n° 7
 
-**But :** Test du gain
+**But :** Un gain
 
 **Déroulement :** Un joueur aligne n symbole
 
@@ -65,7 +65,7 @@
 
 ## Scénario n° 8
 
-**But :** Test d'un cas d'égalité
+**But :** Un cas d'égalité
 
 **Déroulement :** Les deux joueurs s'accordent pour faire une égalité
 
@@ -74,35 +74,71 @@
 
 ## Scénario n° 9
 
-**But :** Test de la victoire de l'IA - changement de la difficulté
+**But :** Fin de partie l'IA
 
-**Déroulement :** Le joueur laisse l'IA gagner
+**Déroulement :** Le joueur finit une partie contre l'IA
 
 **Résultat attendu :** L'application notifie la victoire de l'IA, et propose au joueur soit d'augmenter la difficulté de la partie, soit de rejouter la partie, soit de quitter le jeu et de revenir au menu principal.
 
 
 ## Scénario n° 10
 
-**But :** Test d'une deuxième partie à deux joueurs
+**But :** Une deuxième partie à deux joueurs
 
 **Déroulement :** A la fin d'une partie, les deux joueurs décident de rejouer une partie
 
-**Résultat attendu :** L'application relance une nouvelle partie
+**Résultat attendu :** L'application relance une nouvelle partie en conservant les paramètres de départ (taille de grille, nombre de joueur(s), pseudo(s)).
 
 
 ## Scénario n° 11
 
-**But :** Test d'une deuxième partie contre l 'IA
+**But :** Une deuxième partie contre l'IA - changement de la difficulté
 
-**Déroulement :** 
+**Déroulement :** A la fin d'une partie, le joueur décide de rejouer une partie en augmentant la difficulté de l'IA
 
-**Résultat attendu :** 
+**Résultat attendu :** L'application relance une partie en augmentant le niveau de difficulté de l'AI
 
 
-## Scénario n° 
+## Scénario n° 12
 
-**But :** 
+**But :** Une deuxième partie contre l'IA - même niveau de difficulté
 
-**Déroulement :** 
+**Déroulement :** A la fin d'une partie, le joueur décide de rejouer une partie contre l'IA, avec le même niveau de difficulté
 
-**Résultat attendu :** 
+**Résultat attendu :** L'application relance une partie en conservant le même niveau de difficulté de l'IA
+
+
+## Scénario n° 13
+
+**But :** Fin de partie à deux joueurs - retour au menu principal
+
+**Déroulement :** A la fin d'une partie, l'utilisateur souhaite quitter le jeu et revenir au menu principal
+
+**Résultat attendu :** L'application retourne au menu principal
+
+
+## Scénario n° 14
+
+**But :** Fin de partie à deux joueurs - fermeture de l'application
+
+**Déroulement :** A la fin d'une partie, l'utilisateur souhaite quitter l'application
+
+**Résultat attendu :** L'application se ferme
+
+
+## Scénario n° 15
+
+**But :** Fin de partie contre l'IA - retour au menu principal
+
+**Déroulement :** A la fin d'une partie, l'utilisateur souhaite quitter le jeu et revenir au menu principal
+
+**Résultat attendu :** L'application retourne au menu principal
+
+
+## Scénario n° 16
+
+**But :** Fin de partie contre l'IA - fermeture de l'application
+
+**Déroulement :** A la fin d'une partie, l'utilisateur souhaite quitter l'application
+
+**Résultat attendu :** L'application se ferme
