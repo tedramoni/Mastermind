@@ -1,8 +1,6 @@
 
 # *Besoin fonctionnel*
 
-Ce document décrit notre besoin. Pour plus de détails voir les spécifications fonctionnelles.
-
 ## Objectif
 
 Obtenir un jeu de "morpion", qui peut se jouer à deux joueurs ou en solo contre l'ordinateur.
@@ -21,7 +19,7 @@ Avant chaque début de partie, les joueurs peuvent choisir un pseudo. Le pseudo 
 
 ### Grille
 
-Le Tic-tac-toe se joue par défaut sur une grille carrée de 3×3 cases. Cependant, nous souhaiterions que le choix du nombre de cases puisse s'effectuer au lancement du jeu. Si l'utilisateur ne souhaite pas modifier la taille de la grille, la configuration par défaut sera utilisée.
+Le Tic-tac-toe se joue par défaut sur une grille carrée de 3×3 cases.
 
 ### Symbole
 
@@ -31,7 +29,21 @@ Le Tic-tac-toe se joue par défaut sur une grille carrée de 3×3 cases. Cependa
 
 L'IA demandé utilisera l'algorithme Minimax de Von Neumann. Lorsque le joueur aura décidé de jouer contre l'IA, on lui demandera alors la valeur de p (profondeur de recherche de l'algorithme), sachant que p est proportionnel à la complexité du jeu.
 
+### Déroulement d'une partie 
 
+* Un des deux joueurs (ou l'unique joueur s'il veut jouer contre l'IA) lance l'application.
+* Le joueur sélectionne le type de partie qu'il veut jouer (contre un adversaire physique ou contre l'IA).
+    * Si le joueur a décidé de jouer contre l'IA on lui demande de rentrer la difficulté de l'IA (correspondant à la profondeur de l'algorithme de recherche)
+* Un des deux joueurs rentre son pseudo et se voit affecter automatiquement un symbole
+    * S'il a décidé de jouer contre l'IA la partie commence
+    * Sinon le joueur 2 rentre lui aussi son pseudo et se voit affecter le symbole restant 
+* La partie commence 
+* Le joueur 1 pose son symbole puis c'est au tour du joueur 2 ou de l'IA.
+  Il doit être affiché à l'écran la grille de jeu et le pseudo de la personne qui doit poser son symbole.
+* Ainsi de suite jusqu'à ce que l'un des deux joueurs réussisse à aligner 3 symboles
+    * Si aucun des deux joueurs ne réussit, cela fait une égalité et l'on propose alors aux joueurs de quitter ainsi ou de faire une nouvelle partie (sans avoir besoin de re-saisir les pseudos).
+* Quand le jeu est terminé on propose aux joueurs de faire une nouvelle partie, de retourner au menu ou de quitter l'application.
+    * Si le joueur joue contre l'IA, on lui propose de rejouer en changeant le niveau de difficulté.
 
 
   
