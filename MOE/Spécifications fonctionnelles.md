@@ -42,7 +42,7 @@ A chaque proposition du joueur, l'ordinateur est donc chargé de répondre en ut
 - le blanc : la couleur proposée existe mais elle est mal placée
 - le noir : la couleur proposée existe et est bien placée
 
-Il n'existe pas d'ordre de placement pour les jetons noirs et blancs : ils ne donnent la position exacte des couleurs, mais permettent seulement de la déterminer.
+Il n'existe pas d'ordre de placement pour les jetons noirs et blancs : ils ne donnent pas la position exacte des couleurs, mais permettent seulement de la déterminer.
 
 Si aucune des couleurs proposées ne se trouvent dans la proposition du cachotier, alors aucun jeton n'est affiché.
 Prenons un exemple pour expliquer le cas contraire :
@@ -52,7 +52,7 @@ On constate que le Bleu est bien placé, et que le Gris existe mais est mal plac
 
 ## Déroulement d'une partie
 
-L'utilisateur arrive sur l'interface d'accueil et décide de jouer contre un ordinateur ou contre un adversaire, auquel cas il passera la main au cachotier qui sera chargé de définir une combinaison de 5 couleurs.
+L'utilisateur arrive sur l'interface d'accueil et décide de jouer contre un ordinateur ou contre un adversaire, auquel cas il passera la main au cachotier (joueur ou ordinateur) qui sera chargé de définir une combinaison de 5 couleurs.
 
 Une fois le choix de la combinaison faite, l'utilisateur doit pouvoir choisir le nombre de tentatives maximales qui lui sont autorisées. Ensuite, la partie débute :
 L'utilisateur fait une première proposition, à laquelle le cachotier répond en plaçant des jetons noirs et blancs si besoin est.
