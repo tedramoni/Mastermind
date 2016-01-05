@@ -27,7 +27,7 @@ Chaque couleur sera representée en console par sa première lettre (B pour bleu
 
 ## Nombre de tentatives maximales
 
-Après qu'il ait chosi sur l'interface d'accueil son type de jeu, le nombre de tentatives maximales sera demandé à l'utilisateur.
+Le nombre de tentatives maximales sera demandé à l'utilisateur après qu'il ait choisi sur son type de jeu sur l'interface d'accueil.
 
 ## Définition du code secret
 
@@ -38,4 +38,24 @@ Ce code sera stocké dans l'application sous la forme d'un tableau d'énumérati
 
 ## Réponse du cachotier
 
-To fill
+A chaque proposition du joueur, l'ordinateur est donc chargé de répondre en utilisant des jetons de deux couleurs uniquement :
+- le blanc : la couleur proposée existe mais elle est mal placée
+- le noir : la couleur proposée existe et est bien placée
+
+Il n'existe pas d'ordre de placement pour les jetons noirs et blancs : ils ne donnent la position exacte des couleurs, mais permettent seulement de la déterminer.
+
+Si aucune des couleurs proposées ne se trouvent dans la proposition du cachotier, alors aucun jeton n'est affiché.
+Prenons un exemple pour expliquer le cas contraire :
+La proposition du cachotier est : BORGG pour Bleu - Orange - Rouge - Gris - Gris.
+La première proposition du joueur est  : RVBJM pour Gris - Vert - Bleu - Jaune - Marron.
+On constate que le Bleu est bien placé, et que le Gris existe mais est mal placé, la réponse de l'ordinateur sera donc un jeton blanc et un jeton noir.
+
+## Déroulement d'une partie
+
+L'utilisateur arrive sur l'interface d'accueil et décide de jouer contre un ordinateur ou contre un adversaire, auquel cas il passera la main au cachotier qui sera chargé de définir une combinaison de 5 couleurs.
+
+Une fois le choix de la combinaison faite, l'utilisateur doit pouvoir choisir le nombre de tentatives maximales qui lui sont autorisées. Ensuite, la partie débute :
+L'utilisateur fait une première proposition, à laquelle le cachotier répond en plaçant des jetons noirs et blancs si besoin est.
+Et ainsi de suite jusqu'à la fin de la partie, qui se termine lorsque le nombre de tentatives maximales est atteint, ou que l'utilisateur a trouvé la bonne combinaison (l'ordinateur a donc placé cinq jetons noirs).
+
+A la fin de la partie, le joueur revient sur l'interface d'accueil.
