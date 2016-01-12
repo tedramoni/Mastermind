@@ -78,7 +78,7 @@
 
 **Déroulement :** A la fin d'une partie, les deux joueurs décident de rejouer une partie
 
-**Résultat attendu :** L'application relance une nouvelle partie en conservant les paramètres de départ (taille de grille, nombre de joueur(s), pseudo(s)).
+**Résultat attendu :** L'application relance une nouvelle partie en conservant les paramètres de départ (nombre de joueur(s), pseudo(s)).
 
 
 ## Scénario n° 10
