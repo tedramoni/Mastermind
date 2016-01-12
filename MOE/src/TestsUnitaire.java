@@ -24,5 +24,22 @@ public class TestsUnitaire {
 		
 		Assert.assertEquals(a,b);	
 	}
+	
+	@Test
+	public void TestSaisieCombinaison() {
+		//ce qui a été saisi
+		HumainMastermindPlayer h = new HumainMastermindPlayer();
+		Combinaison csaisie = h.getCombinaison();
+		ArrayList<Color> b = csaisie.getTabCombinaison();
+		
+		//ce qui a été donné "rvvb"
+		ArrayList<Color> a = new ArrayList<Color>();
+		a.add(0, Color.Red);
+		a.add(1, Color.Green);
+		a.add(2, Color.Green);
+		a.add(3, Color.Blue);
+		
+		Assert.assertEquals(a,b);	
+	}
 
 }
