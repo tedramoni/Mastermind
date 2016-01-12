@@ -8,28 +8,31 @@ public enum Color {
 
 	//Objets directement construits
 
-	  Blue(0, "B"),
-	  Red(1, "R"),
-	  Yellow(2, "Y"),
-	  Green(3, "G");
+	Blue(0, "B"),
+	Red(1, "R"),
+	Yellow(2, "Y"),
+	Green(3, "G");
 
-	  private int Number = 0;
-	  private String Character = "";
+	private int Number = 0;
+	private String Character = "";
 
-	  //Constructeur
+	//Constructeur
 
-	  Color(int number, String character){
-	    this.Number = number;
-	    this.Character = character;
+	Color(int number, String character){
+		this.Number = number;
+		this.Character = character;
 
-	  }
-	  
-	  private static final List<Color> VALUES = Collections.unmodifiableList(Arrays.asList(values()));
-	  private static final int SIZE = VALUES.size();
-	  private static final Random RANDOM = new Random();
-	  
-	  public static Color randomColor(){
-		  return VALUES.get(RANDOM.nextInt(SIZE));
-	  }
+	}
 
+	private static final List<Color> VALUES = Collections.unmodifiableList(Arrays.asList(values()));
+	private static final int SIZE = VALUES.size();
+	private static final Random RANDOM = new Random();
+
+	public static Color randomColor(){
+		return VALUES.get(RANDOM.nextInt(SIZE));
+	}
+
+	int getNumber(){
+		return this.Number;
+	}
 }

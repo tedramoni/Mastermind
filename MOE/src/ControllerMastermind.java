@@ -31,16 +31,19 @@ public class ControllerMastermind {
 				if(!Mastermind.isThereTryLeft()){
 					this.lost();
 				}
+				
 			}
 		}
 	}
 
 	public void win(){
 		this.MastermindState = GameState.win;
+		System.out.println("Le joueur qui devine a gagné ! ");
 	}
 
 	public void lost(){
 		this.MastermindState = GameState.lost;
+		System.out.println("Le joueur qui devine a perdu ! ");
 	}
 
 }
