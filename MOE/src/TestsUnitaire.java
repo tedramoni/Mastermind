@@ -22,9 +22,7 @@ public class TestsUnitaire {
 		Combinaison get = converteur.conversion();
 		ArrayList<Color> b = get.getTabCombinaison();
 		
-		Assert.assertEquals(a,b);
-
-		
+		Assert.assertEquals(a,b);	
 	}
 
 }
