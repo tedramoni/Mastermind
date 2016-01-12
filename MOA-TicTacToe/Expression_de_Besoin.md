@@ -9,9 +9,9 @@ Obtenir un jeu de "morpion", qui peut se jouer à deux joueurs ou en solo contre
 
   Le morpion est un jeu de réflexion se pratiquant à deux joueurs au tour par tour et dont le but est de créer, le premier, un alignement de son symbole, qui peut être soit une croix (X), soit par un zéro (0).
 
-### Nombre de joueur
+### Nombre de joueurs
 
-Au démarrage de l'application en console, l'utilisateur peut choisir s'il joue contre un autre joueur ou contre l'ordinateur.
+Au démarrage de l'application, l'utilisateur peut choisir s'il joue contre un autre joueur ou contre l'ordinateur.
   
 ### Pseudo
 
@@ -27,7 +27,7 @@ Le Tic-tac-toe se joue par défaut sur une grille carrée de 3×3 cases.
  
 ### L'ordinateur (IA)
 
-L'IA demandé utilisera l'algorithme Minimax de Von Neumann. Lorsque le joueur aura décidé de jouer contre l'IA, on lui demandera alors la valeur de p (profondeur de recherche de l'algorithme), sachant que p est proportionnel à la complexité du jeu.
+L'IA demandée utilisera l'algorithme Minimax de Von Neumann. Lorsque le joueur aura décidé de jouer contre l'IA, on lui demandera alors la valeur de p (profondeur de recherche de l'algorithme), sachant que p est proportionnel à la complexité du jeu.
 
 ### Déroulement d'une partie 
 
