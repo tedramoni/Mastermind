@@ -24,7 +24,7 @@ public enum Color {
 
 	  }
 	  
-	  private static final List<Color> VALUES =Collections.unmodifiableList(Arrays.asList(values()));
+	  private static final List<Color> VALUES = Collections.unmodifiableList(Arrays.asList(values()));
 	  private static final int SIZE = VALUES.size();
 	  private static final Random RANDOM = new Random();
 	  

@@ -10,6 +10,7 @@ public class Combinaison {
 		this.TabCombinaison = listColor;
 		this.NbColor = listColor.size();
 	}
+
 	
 	public boolean equals(Combinaison testedCombinaison){
 		boolean isDifferent = false;
