@@ -39,15 +39,13 @@ Ce code sera stocké dans l'application sous la forme d'un tableau d'énumérati
 ## Réponse du cachotier
 
 A chaque proposition du joueur, l'ordinateur est donc chargé de répondre en utilisant des jetons de deux couleurs uniquement :
-- le blanc : la couleur proposée existe mais elle est mal placée
-- le noir : la couleur proposée existe et est bien placée
-
-Il n'existe pas d'ordre de placement pour les jetons noirs et blancs : ils ne donnent pas la position exacte des couleurs, mais permettent seulement de la déterminer.
+- le blanc : "il existe un pion d'une couleur qui existe dans la combinaison, mais qui est mal placé"
+- le noir : "il existe un pion d'une couleur qui existe dans la combinaison et qui est bien placé"
 
 Si aucune des couleurs proposées ne se trouvent dans la proposition du cachotier, alors aucun jeton n'est affiché.
-Prenons un exemple pour expliquer le cas contraire :
+Dans le cas contraire, donnons un exemple :
 La proposition du cachotier est : BORGG pour Bleu - Orange - Rouge - Gris - Gris.
-La première proposition du joueur est  : RVBJM pour Gris - Vert - Bleu - Jaune - Marron.
+La première proposition du joueur est  : RVBJM pour Bleu - Vert - Gris - Jaune - Marron.
 On constate que le Bleu est bien placé, et que le Gris existe mais est mal placé, la réponse de l'ordinateur sera donc un jeton blanc et un jeton noir.
 
 ## Déroulement d'une partie
