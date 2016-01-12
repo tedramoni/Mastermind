@@ -43,7 +43,7 @@ L'IA demandée utilisera l'algorithme Minimax de Von Neumann. Lorsque le joueur 
 * Ainsi de suite jusqu'à ce que l'un des deux joueurs réussisse à aligner 3 symboles
     * Si aucun des deux joueurs ne réussit, cela fait une égalité et l'on propose alors aux joueurs de quitter ainsi ou de faire une nouvelle partie (sans avoir besoin de re-saisir les pseudos).
 * Quand le jeu est terminé on propose aux joueurs de faire une nouvelle partie, de retourner au menu ou de quitter l'application.
-    * Si le joueur joue contre l'IA, on lui propose de rejouer en changeant le niveau de difficulté.
+    * Si le joueur joue contre l'IA, on lui propose de rejouer en gardant le même niveau de difficulté ou en l'augmentant.
 
 
   
