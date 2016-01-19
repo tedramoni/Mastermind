@@ -35,4 +35,7 @@ public enum Color {
 	int getNumber(){
 		return this.Number;
 	}
+	String getColor(){
+		return this.Character;
+	}
 }

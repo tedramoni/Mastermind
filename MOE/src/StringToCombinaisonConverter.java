@@ -6,11 +6,16 @@ public class StringToCombinaisonConverter {
 
 	private String saisie;
 	private ArrayList<Color> TabCombinaison;
+	private Combinaison Comb;
 
 
 	public StringToCombinaisonConverter(String s){
 		this.saisie = s;
 		this.TabCombinaison = new ArrayList<Color>();
+	}
+	
+	public StringToCombinaisonConverter(Combinaison comb){
+		this.Comb = comb;
 	}
 
 	public Combinaison conversion(){
@@ -29,5 +34,9 @@ public class StringToCombinaisonConverter {
 
 		return new Combinaison(this.TabCombinaison);
 
+	}
+	public String conversionCombToString(){
+		ArrayListComb.getTabCombinaison()
+		
 	}
 }

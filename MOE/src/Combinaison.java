@@ -42,4 +42,10 @@ public class Combinaison {
 	public void setNbColor(int nbColor) {
 		NbColor = nbColor;
 	}
+	
+	public void afficherCombinaison(){
+		for (Color color : this.getTabCombinaison()) {
+			System.out.print(color.getColor());
+		}
+	}
 }

@@ -38,10 +38,10 @@ public class Comparaison {
 
 
 			}
-			System.out.println(this.ColorIteration[0]);
+			/*System.out.println(this.ColorIteration[0]);
 			System.out.println(this.ColorIteration[1]);
 			System.out.println(this.ColorIteration[2]);
-			System.out.println(this.ColorIteration[3]);
+			System.out.println(this.ColorIteration[3]);*/
 
 			// CHECK :
 			// On compare les emplacements un a un :

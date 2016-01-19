@@ -5,9 +5,11 @@ public class GameMastermind {
 
 	private int NbTryMax = 10;
 	private Combinaison secretCombinaison;
-	private ArrayList<Combinaison> TabTryCombinaison;
+	private ArrayList<Combinaison> TabTryCombinaison = new ArrayList<Combinaison>();
 	
-	public void setCombinaison(Combinaison newCombinaison){
+	
+	public void setCombinaison(Combinaison newCombinaison)
+	{
 		this.secretCombinaison = newCombinaison;
 	}
 	
@@ -22,9 +24,13 @@ public class GameMastermind {
 
 	public void setNbTryMax(int nbTryMax) {
 		assert(nbTryMax>1); // !!!!!!!!!!!!!!!!!!!!!
-		NbTryMax = nbTryMax;
+		this.NbTryMax = nbTryMax;
 	}
 	
+	public ArrayList<Combinaison> getTabTryCombinaison() {
+		return TabTryCombinaison;
+	}
+
 	public boolean isThereTryLeft(){
 		return (TabTryCombinaison.size() < this.NbTryMax);
 	}
