@@ -76,22 +76,22 @@ public class TestsUnitaire {
 		a.add(3, Color.Blue);
 				
 		ArrayList<Color> b = new ArrayList<Color>(); 
-		a.add(0, Color.Green);
-		a.add(1, Color.Green);
-		a.add(2, Color.Green);
-		a.add(3, Color.Blue);
+		b.add(0, Color.Green);
+		b.add(1, Color.Green);
+		b.add(2, Color.Green);
+		b.add(3, Color.Blue);
 		
 		ArrayList<Color> c = new ArrayList<Color>(); 
-		a.add(0, Color.Red);
-		a.add(1, Color.Blue);
-		a.add(2, Color.Green);
-		a.add(3, Color.Blue);
+		c.add(0, Color.Red);
+		c.add(1, Color.Blue);
+		c.add(2, Color.Green);
+		c.add(3, Color.Blue);
 		
 		ArrayList<Color> d = new ArrayList<Color>(); 
-		a.add(0, Color.Red);
-		a.add(1, Color.Green);
-		a.add(2, Color.Red);
-		a.add(3, Color.Red);
+		d.add(0, Color.Red);
+		d.add(1, Color.Green);
+		d.add(2, Color.Red);
+		d.add(3, Color.Red);
 		
 		tab.add(new Combinaison(a));
 		tab.add(new Combinaison(b));
@@ -106,6 +106,7 @@ public class TestsUnitaire {
 			
 		i++;
 		}
+
 	//	Model.Comparaison resultat = new Model.Comparaison(secret, proposition);
 	//	System.out.println("Pions noir : bien placé bonne couleur " + resultat.getBlack() +"\n");
 	//	System.out.println("Pions blanc pas bien placé  mais bonne couleur " + resultat.getWhite() +"\n");
