@@ -1,5 +1,9 @@
+package Model;
 
-public class IaMastermindPlayer extends MastermindPlayer {
+import Model.Combinaison;
+import Model.Player;
+
+public class Ia extends Player {
 
 
 	@Override

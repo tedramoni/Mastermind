@@ -1,3 +1,6 @@
+import Controller.Controller;
+import Model.*;
+
 import java.util.Scanner;
 
 public class Application {
@@ -8,12 +11,12 @@ public class Application {
 
 		if(Choix== 1){
 			System.out.println("Passez la main au cachotier");
-			ControllerMastermind ControllerMastermind = new ControllerMastermind(1);
-			ControllerMastermind.startMastermind();
+			Controller Controller = new Controller(1);
+			Controller.startMastermind();
 		}else if (Choix== 2){
 			System.out.println("ordi");
-			ControllerMastermind ControllerMastermind = new ControllerMastermind(2);
-			ControllerMastermind.startMastermind();
+			Controller Controller = new Controller(2);
+			Controller.startMastermind();
 		}
 
 
@@ -36,9 +39,5 @@ public class Application {
 		}
 		return Choix;
 	}
-	public void runApplication(){
-
-	}
-	
 }
 

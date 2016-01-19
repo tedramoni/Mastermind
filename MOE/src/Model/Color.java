@@ -1,3 +1,5 @@
+package Model;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -35,7 +37,8 @@ public enum Color {
 	int getNumber(){
 		return this.Number;
 	}
-	String getColor(){
+
+	public String getColor(){
 		return this.Character;
 	}
 }

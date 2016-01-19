@@ -1,7 +1,11 @@
+package Model;
+
+import Model.*;
+
 import java.util.ArrayList;
 
 
-public class GameMastermind {
+public class Game {
 
 	private int NbTryMax = 10;
 	private Combinaison secretCombinaison;

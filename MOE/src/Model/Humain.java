@@ -1,7 +1,13 @@
+package Model;
+
+import Model.Combinaison;
+import Model.Player;
+import Converter.StringToCombinaison;
+
 import java.util.Scanner;
 
 
-public class HumainMastermindPlayer extends MastermindPlayer {
+public class Humain extends Player {
 
 
 	@Override
@@ -11,7 +17,7 @@ public class HumainMastermindPlayer extends MastermindPlayer {
 		System.out.println("r = Rouge / v = Vert / j = Jaune / b = Bleu : ");
 		System.out.println("Saisissez une combinaison : ");
 		String saisie = sc.nextLine();    
-		return new StringToCombinaisonConverter(saisie).conversion();
+		return new StringToCombinaison(saisie).conversion();
 	}
 
 	public int getTryMax(){

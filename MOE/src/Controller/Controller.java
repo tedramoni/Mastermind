@@ -1,27 +1,28 @@
-import java.util.ArrayList;
+package Controller;
 
+import Model.*;
 
-public class ControllerMastermind {
+public class Controller {
 
 	private int typePartie = 0;
-	private GameState MastermindState = GameState.stopped;
-	private GameMastermind Mastermind;
-	private MastermindPlayer cachotier;
-	private MastermindPlayer devin;
+	private GameState MastermindState = GameState.STOPPED;
+	private Game Mastermind;
+	private Player cachotier;
+	private Player devin;
 	private Combinaison source;
 
-	public ControllerMastermind(int type) {
+	public Controller(int type) {
 		this.typePartie = type;
 
 	}
 
 	public void startMastermind() {
-		this.MastermindState = GameState.started;
-		this.Mastermind = new GameMastermind();
+		this.MastermindState = GameState.STARTED;
+		this.Mastermind = new Game();
 
-		if (this.typePartie == 1) { //Joueur réel
-			this.devin = new HumainMastermindPlayer();
-			this.cachotier = new HumainMastermindPlayer();// on crée le joueur humain
+		if (this.typePartie == 1) { //Joueur rï¿½el
+			this.devin = new Humain();
+			this.cachotier = new Humain();// on crï¿½e le joueur humain
 			this.Mastermind.setCombinaison(this.source = this.cachotier.getCombinaison());//on lui demande la combinaison
 			this.Mastermind.setNbTryMax(this.cachotier.getTryMax());//on lui demande le nombre d'essai max
 
@@ -29,7 +30,7 @@ public class ControllerMastermind {
 			Comparaison comparaison;
 
 
-			while (this.MastermindState != GameState.win && this.MastermindState != GameState.lost) {
+			while (this.MastermindState != GameState.WIN && this.MastermindState != GameState.LOST) {
 
 				proposition = devin.getCombinaison();
 				comparaison = Mastermind.tryCombinaison(proposition);
@@ -38,7 +39,7 @@ public class ControllerMastermind {
 				if (comparaison.getBlack() == comparaison.getSize()) {
 					this.win();
 				} else {
-					System.out.println("Vous avez " + comparaison.getBlack() + " pions bien placés et " + comparaison.getWhite() + " bonnes couleurs ");
+					System.out.println("Vous avez " + comparaison.getBlack() + " pions bien placï¿½s et " + comparaison.getWhite() + " bonnes couleurs ");
 					if (!Mastermind.isThereTryLeft()) {
 						this.lost();
 					}
@@ -65,12 +66,12 @@ public class ControllerMastermind {
 	}
 	
 	public void win() {
-		this.MastermindState = GameState.win;
-		System.out.println("Le joueur qui devine a gagné ! ");
+		this.MastermindState = GameState.WIN;
+		System.out.println("Le joueur qui devine a gagnï¿½ ! ");
 	}
 
 	public void lost() {
-		this.MastermindState = GameState.lost;
+		this.MastermindState = GameState.LOST;
 		System.out.println("Le joueur qui devine a perdu ! ");
 	}
 

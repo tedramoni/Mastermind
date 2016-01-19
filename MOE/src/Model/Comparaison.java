@@ -1,4 +1,4 @@
-
+package Model;
 
 public class Comparaison {
 
@@ -23,7 +23,7 @@ public class Comparaison {
 			 */
 
 			// PREREQ :
-			// On compte le nombre d'itération de chaque couleur et on stock dans un tableau de la taille du nombre de couleurs
+			// On compte le nombre d'itï¿½ration de chaque couleur et on stock dans un tableau de la taille du nombre de couleurs
 			for(int i = 0; i  < this.size; i++)
 			{
 			
@@ -45,14 +45,14 @@ public class Comparaison {
 
 			// CHECK :
 			// On compare les emplacements un a un :
-			// SI couleur + position sont égales, un blanc ET on retire 1 du tableau de la taille
-			// SINON SI couleur est présente (>0) dans le tableau ci dessus d'itérations de couleurs , un noir
+			// SI couleur + position sont ï¿½gales, un blanc ET on retire 1 du tableau de la taille
+			// SINON SI couleur est prï¿½sente (>0) dans le tableau ci dessus d'itï¿½rations de couleurs , un noir
 			// SINON ni blanc ni noir.
-			// ===> en tout 3 itérations de tableaux.
+			// ===> en tout 3 itï¿½rations de tableaux.
 
 			for (int i = 0; i  < this.size; i++){
-				//ValueToCompare = comb2.TabCombinaison.get(a).valueOf(a); // doit retourner l'int lié a la couleur
-				//ValueRef ==  comb1.TabCombinaison.get(a).valueOf(a); // doit retourner l'int lié a la couleur
+				//ValueToCompare = comb2.TabCombinaison.get(a).valueOf(a); // doit retourner l'int liï¿½ a la couleur
+				//ValueRef ==  comb1.TabCombinaison.get(a).valueOf(a); // doit retourner l'int liï¿½ a la couleur
 				int ValueToCompare = proposition.getColorIndex(i).getNumber();
 				int ValueRef = secret.getColorIndex(i).getNumber();
 				
