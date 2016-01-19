@@ -12,8 +12,8 @@ public enum Color {
 
 	Blue(0, "B"),
 	Red(1, "R"),
-	Yellow(2, "Y"),
-	Green(3, "G");
+	Yellow(2, "J"),
+	Green(3, "V");
 
 	private int Number = 0;
 	private String Character = "";

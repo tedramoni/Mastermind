@@ -3,6 +3,8 @@ package Model;
 import Model.Combinaison;
 import Model.Player;
 
+import java.util.ArrayList;
+
 public class Ia extends Player {
 
 
@@ -13,8 +15,16 @@ public class Ia extends Player {
 	}
 	@Override
 	public Combinaison getCombinaison() {
-		// TODO Auto-generated method stub
-		return null;
+
+		ArrayList<Color> a = new ArrayList<Color>();
+		a.add(0, Color.randomColor());
+		a.add(1, Color.randomColor());
+		a.add(2, Color.randomColor());
+		a.add(3, Color.randomColor());
+		a.add(4, Color.randomColor());
+
+		Combinaison secret = new Combinaison(a);
+		return secret;
 	}
 
 	@Override
