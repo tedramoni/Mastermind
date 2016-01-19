@@ -23,7 +23,7 @@ public class Comparaison {
 			 */
 
 			// PREREQ :
-			// On compte le nombre d'it�ration de chaque couleur et on stock dans un tableau de la taille du nombre de couleurs
+			// On compte le nombre d'itération de chaque couleur et on stock dans un tableau de la taille du nombre de couleurs
 			for(int i = 0; i  < this.size; i++)
 			{
 			
@@ -45,14 +45,14 @@ public class Comparaison {
 
 			// CHECK :
 			// On compare les emplacements un a un :
-			// SI couleur + position sont �gales, un blanc ET on retire 1 du tableau de la taille
-			// SINON SI couleur est pr�sente (>0) dans le tableau ci dessus d'it�rations de couleurs , un noir
+			// SI couleur + position sont égales, un blanc ET on retire 1 du tableau de la taille
+			// SINON SI couleur est présente (>0) dans le tableau ci dessus d'itérations de couleurs , un noir
 			// SINON ni blanc ni noir.
-			// ===> en tout 3 it�rations de tableaux.
+			// ===> en tout 3 itérations de tableaux.
 
 			for (int i = 0; i  < this.size; i++){
-				//ValueToCompare = comb2.TabCombinaison.get(a).valueOf(a); // doit retourner l'int li� a la couleur
-				//ValueRef ==  comb1.TabCombinaison.get(a).valueOf(a); // doit retourner l'int li� a la couleur
+				//ValueToCompare = comb2.TabCombinaison.get(a).valueOf(a); // doit retourner l'int liééa la couleur
+				//ValueRef ==  comb1.TabCombinaison.get(a).valueOf(a); // doit retourner l'int lié a la couleur
 				int ValueToCompare = proposition.getColorIndex(i).getNumber();
 				int ValueRef = secret.getColorIndex(i).getNumber();
 				

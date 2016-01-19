@@ -20,9 +20,9 @@ public class Controller {
 		this.MastermindState = GameState.STARTED;
 		this.Mastermind = new Game();
 
-		if (this.typePartie == 1) { //Joueur r�el
+		if (this.typePartie == 1) { //Joueur éel
 			this.devin = new Humain();
-			this.cachotier = new Humain();// on cr�e le joueur humain
+			this.cachotier = new Humain();// on céée le joueur humain
 			this.Mastermind.setCombinaison(this.source = this.cachotier.getCombinaison());//on lui demande la combinaison
 			this.Mastermind.setNbTryMax(this.cachotier.getTryMax());//on lui demande le nombre d'essai max
 
@@ -39,7 +39,7 @@ public class Controller {
 				if (comparaison.getBlack() == comparaison.getSize()) {
 					this.win();
 				} else {
-					System.out.println("Vous avez " + comparaison.getBlack() + " pions bien plac�s et " + comparaison.getWhite() + " bonnes couleurs ");
+					System.out.println("Vous avez " + comparaison.getBlack() + " pions bien placés et " + comparaison.getWhite() + " bonnes couleurs ");
 					if (!Mastermind.isThereTryLeft()) {
 						this.lost();
 					}
@@ -67,7 +67,7 @@ public class Controller {
 	
 	public void win() {
 		this.MastermindState = GameState.WIN;
-		System.out.println("Le joueur qui devine a gagn� ! ");
+		System.out.println("Le joueur qui devine a gagné ! ");
 	}
 
 	public void lost() {

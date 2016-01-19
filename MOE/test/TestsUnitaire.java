@@ -28,12 +28,12 @@ public class TestsUnitaire {
 	
 	/*@Test --------------------------------------------TEST OK MAIS SCANNER ---------------------------
 	public void TestSaisieCombinaison() {
-		//ce qui a �t� saisi
+		//ce qui a été saisi
 		Model.Humain h = new Model.Humain();
 		Model.Combinaison csaisie = h.getCombinaison();
 		ArrayList<Model.Color> b = csaisie.getTabCombinaison();
 		
-		//ce qui a �t� donn� "rvvb"
+		//ce qui a été donné "rvvb"
 		ArrayList<Model.Color> a = new ArrayList<Model.Color>();
 		a.add(0, Model.Color.Red);
 		a.add(1, Model.Color.Green);
@@ -61,8 +61,8 @@ public class TestsUnitaire {
 		Combinaison proposition  = new Combinaison(b);
 		
 		Comparaison resultat = new Comparaison(secret, proposition);
-		System.out.println("Pions noir : bien plac� bonne couleur " + resultat.getBlack() +"\n");
-		System.out.println("Pions blanc pas bien plac� mais bonne couleur " + resultat.getWhite() +"\n");
+		System.out.println("Pions noir : bien placé bonne couleur " + resultat.getBlack() +"\n");
+		System.out.println("Pions blanc pas bien placé mais bonne couleur " + resultat.getWhite() +"\n");
 
 	}
 	
@@ -107,18 +107,18 @@ public class TestsUnitaire {
 		i++;
 		}
 	//	Model.Comparaison resultat = new Model.Comparaison(secret, proposition);
-	//	System.out.println("Pions noir : bien plac� bonne couleur " + resultat.getBlack() +"\n");
-	//	System.out.println("Pions blanc pas bien plac� mais bonne couleur " + resultat.getWhite() +"\n");
+	//	System.out.println("Pions noir : bien placé bonne couleur " + resultat.getBlack() +"\n");
+	//	System.out.println("Pions blanc pas bien placé  mais bonne couleur " + resultat.getWhite() +"\n");
 
 	}
 
 	/*@Test --------------------------------------------TEST OK MAIS SCANNER ---------------------------
 	public void TestSaisieCombinaison() {
-		//ce qui a �t� saisi
+		//ce qui a été saisi
 		Model.Humain h = new Model.Humain();
 		int nb = h.getTryMax();
 
-		//ce qui a �t� donn� "9"
+		//ce qui a été donné "9"
 			
 		Assert.assertEquals(9,nb);
 	}*/

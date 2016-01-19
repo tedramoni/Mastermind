@@ -14,7 +14,7 @@ public class Combinaison {
 	}
 
 	
-	public boolean egal(Combinaison testedCombinaison){
+	public boolean equals(Combinaison testedCombinaison){
 		boolean isDifferent = false;
 		
 		for(int i = 0 ; i < this.TabCombinaison.size() ; i++){
