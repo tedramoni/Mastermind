@@ -12,15 +12,24 @@ import model.Combinaison;
 import model.EnumEvent;
 import model.Ui;
 
-
+/**
+ * Classe pour afficher le menu à l'écran
+ *
+ */
 public class UiMastermind extends Ui{
 
 	protected OutputStream out;
 
+	/**
+	 * Constructeur sans paramètre
+	 */
 	public UiMastermind(){
 		this.out = System.out;
 	}
 
+	/**
+	 * Fonction pour afficher le menu à l'écran
+	 */
 	@Override
 	public void display(EnumEvent event) throws IOException {
 
@@ -57,11 +66,21 @@ public class UiMastermind extends Ui{
 		}
 	}
 
+	/**
+	 * Fonction pour afficher le resultat de la comparaison
+	 * @param resultat resultat de la comparaison
+	 * @throws IOException 
+	 */
 	public void displayResultComparaison(CombinaisonComparaison resultat) throws IOException {
 		this.out.write(resultat.toString().getBytes(StandardCharsets.UTF_8));
 		this.out.flush();
 	}
 	
+	/**
+	 * Fonction pour afficher l'historique de la partie
+	 * @param history
+	 * @throws IOException
+	 */
 	public void displayHistory(String history) throws IOException {
 
 		this.out.write(history.getBytes(StandardCharsets.UTF_8));
