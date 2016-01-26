@@ -45,13 +45,13 @@ public class TestsUnitaire {
 	
 	@Test
 	public void TestComparaisonCouleurs(){
-		ArrayList<Color> a = new ArrayList<Color>(); 
+		List<Color> a = new ArrayList<Color>(); //VBO Utiliser les interfaces plutôt que les implémentations. A corriger partout.
 		a.add(0, Color.Red);
 		a.add(1, Color.Green);
 		a.add(2, Color.Green);
 		a.add(3, Color.Blue);
 		
-		ArrayList<Color> b = new ArrayList<Color>(); 
+		List<Color> b = new ArrayList<Color>(); 
 		b.add(0, Color.Red);
 		b.add(1, Color.Green);
 		b.add(2, Color.Green);
@@ -64,6 +64,7 @@ public class TestsUnitaire {
 		System.out.println("Pions noir : bien placé bonne couleur " + resultat.getBlack() +"\n");
 		System.out.println("Pions blanc pas bien placé mais bonne couleur " + resultat.getWhite() +"\n");
 
+		//VBO Quel est le test ? Qu'est-ce qu'on vérifie ici ?
 	}
 	
 	@Test

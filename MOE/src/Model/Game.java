@@ -27,7 +27,7 @@ public class Game {
 	}
 
 	public void setNbTryMax(int nbTryMax) {
-		assert(nbTryMax>1); // !!!!!!!!!!!!!!!!!!!!!
+		assert(nbTryMax>1); // !!!!!!!!!!!!!!!!!!!!! //VBO Oui !!!!!
 		this.NbTryMax = nbTryMax;
 	}
 	

@@ -7,13 +7,14 @@ Ce document vise à décrire en détail chacune des fonctions de l'application M
 
 Le cachotier pourra soit être joué par un ordinateur, soit par un humain.
 
-Si le cachotier est un joueur, son seul rôle sera de définir le code secret de 5 couleurs.
+Si le cachotier est un joueur, son seul rôle sera de définir le code secret de 5 couleurs<!-- j'en compte 4 dans votre code -->.
 De plus, à chaque proposition du joueur, c'est donc l'ordinateur qui sera chargé de répondre.
 
 
 ## Lot couleur
 
 Le jeu utilisera un lot de 8 couleurs, listées ci-dessous:
+<!-- j'en compte 4 dans votre code -->
 * Bleu
 * Vert
 * Jaune

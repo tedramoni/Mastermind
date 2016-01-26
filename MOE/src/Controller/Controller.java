@@ -9,11 +9,11 @@ public class Controller {
 
 	private int typePartie = 0;
 	private GameState MastermindState = GameState.STOPPED;
-	private Game Mastermind;
+	private Game Mastermind; //VBO attention à respecter le CamelCasing, les variables commencent avec un minuscule.
 	private Player cachotier;
 	private Player devin;
 	private Combinaison source;
-	private ArrayList<Combinaison> historique = new ArrayList<Combinaison>();
+	private ArrayList<Combinaison> historique = new ArrayList<Combinaison>(); //VBO Utiliser l'interface comme type de variable
 
 
 	public Controller(int type) {
@@ -25,9 +25,9 @@ public class Controller {
 		this.MastermindState = GameState.STARTED;
 		this.Mastermind = new Game();
 
-		if (this.typePartie == 1) { //Joueur éel
+		if (this.typePartie == 1) { //Joueur éel //VBO Vous avez des énumérations partout (ce qui est bien), on peut en faire ici aussi !
 			this.devin = new Humain();
-			this.cachotier = new Humain();// on céée le joueur humain
+			this.cachotier = new Humain();// on céée le joueur humain //VBO Si vous devez commenter chaque ligne de code, c'est qu'il y a un problème avec votre code.
 			this.Mastermind.setCombinaison(this.source = this.cachotier.getCombinaison());//on lui demande la combinaison
 			this.Mastermind.setNbTryMax(this.cachotier.getTryMax());//on lui demande le nombre d'essai max
 
@@ -83,7 +83,7 @@ public class Controller {
 						this.lost();
 					}
 
-				}
+				} //VBO Mais c'est le même code que pour un humain ? Pourquoi ne pas en faire une fonction pour être DRY ?
 			}
 		}
 
