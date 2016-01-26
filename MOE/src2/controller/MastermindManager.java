@@ -10,7 +10,11 @@ import model.PlayerMastermind;
 import util.CombinaisonComparaison;
 import view.UiMastermind;
 
-
+/**
+ * 
+ * Classe qui permet de gérer le déroulement de la partie
+ *
+ */
 public class MastermindManager extends GameManager {
 
 	private PlayerMastermind player1;
@@ -18,6 +22,10 @@ public class MastermindManager extends GameManager {
 	protected UiMastermind ui;
 	protected Mastermind game;
 	
+	/**
+	 * Constructeur avec paramètre
+	 * @param type type de partie (joueur humain contre joueur humain ou joueur humain contre IA)
+	 */
 	public MastermindManager(EnumMastermindType type){
 		
 		this.game = new Mastermind();
@@ -32,6 +40,9 @@ public class MastermindManager extends GameManager {
 		}
 	}
 
+	/**
+	 * Classe pour gérer le déroulement de la partie
+	 */
 	@Override
 	public void play() throws IOException {
 

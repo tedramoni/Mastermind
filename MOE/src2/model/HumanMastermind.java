@@ -7,7 +7,11 @@ import java.io.OutputStreamWriter;
 
 import util.StringToCombinaison;
 
-
+/**
+ * 
+ * Classe HumanMastermind pour décrire la combinaison donnée par le joueur humain
+ *
+ */
 public class HumanMastermind extends PlayerMastermind {
 
 	private BufferedReader in;
@@ -15,12 +19,19 @@ public class HumanMastermind extends PlayerMastermind {
 	
 	private String pseudo = "DefaultHuman";
 	
+	/**
+	 * Constructeur avec paramètre
+	 * @param s paramètre pour le pseudo du joueur humain
+	 */
 	public HumanMastermind(String s) {
 		this.pseudo = s;
 		this.out = new BufferedWriter((new OutputStreamWriter(System.out)));
 		this.in = new BufferedReader((new InputStreamReader(System.in)));
 	}
 	
+	/**
+	 * Recupère la combinaison donnée par le joueur humain
+	 */
 	@Override
 	public Combinaison getCombinaison() throws IOException {
 		out.write(this.pseudo + "  Get Write Combinaison");

@@ -5,7 +5,11 @@ import java.util.List;
 import model.Combinaison;
 import model.EnumColor;
 
-
+/**
+ * 
+ * Class qui transforme une chaîne de caractère en une combinaison de couleurs
+ *
+ */
 public class StringToCombinaison {
 	
 	public static final Combinaison getCombinaison(String s){
