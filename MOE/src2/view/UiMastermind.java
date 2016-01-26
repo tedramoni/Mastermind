@@ -25,14 +25,23 @@ public class UiMastermind extends Ui{
 	public void display(EnumEvent event) throws IOException {
 
 		switch (event) {
-		case Welcome:
-			this.out.write(("--- WELCOME ---").getBytes(StandardCharsets.UTF_8));
+		case ChoicePartie:
+			this.out.write(("	1 : Jouer contre un autre joueur").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
-			this.out.write(("--- Rentrez une combinaison  ---").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("	2 : Jouer contre l'ordinateur").getBytes(StandardCharsets.UTF_8));
+			this.out.flush();
+			this.out.write(("	3 : Jouer contre un autre joueur avec option Elephant").getBytes(StandardCharsets.UTF_8));
+			this.out.flush();
+			this.out.write(("	4 : Jouer contre un ordinateur avec option Elephant").getBytes(StandardCharsets.UTF_8));
+			this.out.flush();
+		case Welcome:
+			this.out.write(("--- WELCOME --- \n").getBytes(StandardCharsets.UTF_8));
+			this.out.flush();
+			this.out.write(("--- Cachotier : Rentrez une combinaison  ---").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case AskCombinaison:
-			this.out.write(("--- Joueur 2 : Devinez la combianison  ---").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("--- Joueur 2 : Devinez la combinaison  ---").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case Quit:
@@ -49,6 +58,10 @@ public class UiMastermind extends Ui{
 			break;
 		case Rules:
 			this.out.write(("--- RULES ---").getBytes(StandardCharsets.UTF_8));
+			this.out.flush();
+			break;
+		case InputError:
+			this.out.write(("--- Veuillez ressaisir votre combinaison  ---").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		default:

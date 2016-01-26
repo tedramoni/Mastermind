@@ -25,12 +25,13 @@ public class HumanMastermind extends PlayerMastermind {
 	public Combinaison getCombinaison() throws IOException {
 		out.write(this.pseudo + "  Get Write Combinaison");
 		String line = this.getString();	
+		
 		return StringToCombinaison.getCombinaison(line);
 		
 	}
 	
 	public String getString() throws IOException{
-		return in.readLine();	
+		return in.readLine().toUpperCase();	
 	}
 
 }

@@ -17,12 +17,12 @@ public class MastermindManager extends GameManager {
 	private PlayerMastermind player2;
 	protected UiMastermind ui;
 	protected Mastermind game;
-	
+
 	public MastermindManager(EnumMastermindType type){
-		
+
 		this.game = new Mastermind();
 		this.ui = new UiMastermind();
-		
+
 		if(type == EnumMastermindType.HvsH){
 			this.player1 = new HumanMastermind("Jean");
 			this.player2 = new HumanMastermind("Michel");
@@ -35,20 +35,31 @@ public class MastermindManager extends GameManager {
 	@Override
 	public void play() throws IOException {
 
-		
+
 		this.ui.display(EnumEvent.Welcome);
-		
+
 		Combinaison secretComb = this.player1.getCombinaison();
+		while(secretComb == null){
+			this.ui.display(EnumEvent.InputError);
+			secretComb = this.player1.getCombinaison();
+		}
+		
 		Combinaison guessComb;
 
 		this.game.setCombinaison(secretComb);
 		while(!this.game.isLoose() && !this.game.isWin()){
-			
+
 			this.ui.display(EnumEvent.AskCombinaison);
-			
+
 			guessComb = this.player2.getCombinaison();
-			CombinaisonComparaison result = this.game.tryCombinaison(guessComb);
+
+			while(guessComb == null){
+				this.ui.display(EnumEvent.InputError);
+				guessComb = this.player1.getCombinaison();
+			}
 			
+			CombinaisonComparaison result = this.game.tryCombinaison(guessComb);
+
 			this.ui.displayHistory(this.game.toString());
 			//this.ui.displayResultComparaison(result);
 			if(this.game.isLoose()){
@@ -58,19 +69,19 @@ public class MastermindManager extends GameManager {
 				this.ui.display(EnumEvent.Win);
 			}
 		}
-		
-		
+
+
 	}
 
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void quit() {
 		// TODO Auto-generated method stub
-		
+
 	}
 }
