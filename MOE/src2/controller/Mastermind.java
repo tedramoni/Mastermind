@@ -1,5 +1,11 @@
+package controller;
 import java.util.ArrayList;
 import java.util.List;
+
+import util.CombinaisonComparaison;
+import model.Combinaison;
+import model.EnumGameState;
+import model.Game;
 
 
 public class Mastermind extends Game {

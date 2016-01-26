@@ -1,6 +1,9 @@
 import java.io.IOException;
 import java.util.List;
 
+import controller.MastermindManager;
+import model.EnumMastermindType;
+
 
 public class Application {
 	

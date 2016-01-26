@@ -1,9 +1,13 @@
+package view;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+
+import model.EnumEvent;
+import model.Ui;
 
 
 public class UiMastermind extends Ui{

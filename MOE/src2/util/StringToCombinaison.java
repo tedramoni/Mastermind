@@ -1,5 +1,9 @@
+package util;
 import java.util.ArrayList;
 import java.util.List;
+
+import model.Combinaison;
+import model.EnumColor;
 
 
 public class StringToCombinaison {

@@ -1,4 +1,13 @@
+package controller;
 import java.io.IOException;
+
+import view.UiMastermind;
+import model.Combinaison;
+import model.EnumEvent;
+import model.EnumMastermindType;
+import model.HumanMastermind;
+import model.IaMastermind;
+import model.PlayerMastermind;
 
 
 public class MastermindManager extends GameManager {

@@ -1,3 +1,6 @@
+package util;
+import model.Combinaison;
+
 
 public class CombinaisonComparaison {
 
