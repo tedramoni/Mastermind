@@ -7,7 +7,12 @@ import model.Combinaison;
 import model.EnumGameState;
 import model.Game;
 
-
+/**
+ * Définit les principales méthodes du Mastermind
+ * 
+ * @author Alexis Colonna
+ *
+ */
 public class Mastermind extends Game {
 	
 	private int TryMax = 10;
@@ -24,15 +29,27 @@ public class Mastermind extends Game {
 		
 	}
 	
+	/**
+	 * Setter de TabTryCombinaison
+	 * @return La liste des combinaison tentée par le joueur
+	 */
 	public List<Combinaison> getTabTryCombinaison() {
 		return TabTryCombinaison;
 	}
 
-
+	/**
+	 * Setter de la combinaison secrete
+	 * @param newCombinaison Une combinaison
+	 */
 	public void setCombinaison(Combinaison newCombinaison){
 		this.secretCombinaison = newCombinaison;
 	}
 	
+	/**
+	 * Méthode correspondant à un tour de Mastermind
+	 * @param tryedCombinaison La combinaison à essayer
+	 * @return Une classe de comparaison donnant le nombre de jetons blanc et de jetons noirs
+	 */
 	public CombinaisonComparaison tryCombinaison(Combinaison tryedCombinaison){
 		CombinaisonComparaison c = new CombinaisonComparaison(new Combinaison(secretCombinaison), new Combinaison(tryedCombinaison));
 		
@@ -51,6 +68,10 @@ public class Mastermind extends Game {
 		return c;
 	}
 	
+	/**
+	 * 
+	 * @return Le numéro du coup et la combinaison entrée par l'utilisateur sous forme de String
+	 */
 	public String toString(){
 		String s ="";
 		
@@ -60,7 +81,10 @@ public class Mastermind extends Game {
 		
 		return s;
 	}
-	
+	/**
+	 * Méthode permettant de savoir s'il reste encore des tours aux joueurs 
+	 * @return un boolean qui est à true s'il reste des tours aux joueurs et à false s'il ne peut plus jouer
+	 */
 	public boolean isThereTryLeft(){
 		return (TabTryCombinaison.size() < this.TryMax);
 	}
