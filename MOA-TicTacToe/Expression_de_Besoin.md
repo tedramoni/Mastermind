@@ -45,7 +45,7 @@ L'IA demandée utilisera l'algorithme Minimax de Von Neumann. Lorsque le joueur 
 * Quand le jeu est terminé on propose aux joueurs de faire une nouvelle partie, de retourner au menu ou de quitter l'application.
     * Si le joueur joue contre l'IA, on lui propose de rejouer en gardant le même niveau de difficulté ou en l'augmentant.
 
-Bonus :
+# Bonus
 
 C'est toujours l'utilisateur qui a la Croix qui débute la partie. Dans le cas d'une partie contre l'IA, le symbole est attribué de façon aléatoire entre l'humain et l'IA.
 
