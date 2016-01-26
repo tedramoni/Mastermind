@@ -1,13 +1,14 @@
 package controller;
 import java.io.IOException;
 
-import view.UiMastermind;
 import model.Combinaison;
 import model.EnumEvent;
 import model.EnumMastermindType;
 import model.HumanMastermind;
 import model.IaMastermind;
 import model.PlayerMastermind;
+import util.CombinaisonComparaison;
+import view.UiMastermind;
 
 
 public class MastermindManager extends GameManager {
@@ -39,14 +40,17 @@ public class MastermindManager extends GameManager {
 		
 		Combinaison secretComb = this.player1.getCombinaison();
 		Combinaison guessComb;
-		
+
 		this.game.setCombinaison(secretComb);
-		
 		while(!this.game.isLoose() && !this.game.isWin()){
 			
-			guessComb = this.player2.getCombinaison();
-			this.game.tryCombinaison(guessComb);
+			this.ui.display(EnumEvent.AskCombinaison);
 			
+			guessComb = this.player2.getCombinaison();
+			CombinaisonComparaison result = this.game.tryCombinaison(guessComb);
+			
+			this.ui.displayHistory(this.game.toString());
+			//this.ui.displayResultComparaison(result);
 			if(this.game.isLoose()){
 				this.ui.display(EnumEvent.Loose);
 			}

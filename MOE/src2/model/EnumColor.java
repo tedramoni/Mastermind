@@ -4,12 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-/**
- * 
- * 
- * @author Alexis Colonna
- *
- */
+
 public enum EnumColor {
 
 	//Objets directement construits
@@ -21,29 +16,15 @@ public enum EnumColor {
 
 	private int Number = 0;
 	private char Character = '.';
-	
-	private static final List<EnumColor> VALUES = Collections.unmodifiableList(Arrays.asList(values()));
-	private static final int SIZE = VALUES.size();
-	private static final Random RANDOM = new Random();
 
-	
-	/**
-	 * Constructeur de l'enum
-	 * 
-	 * @param number numéro représentant la couleur à créer
-	 * @param character lettre représentant la couleur à créer
-	 */
+	//Constructeur
+
 	EnumColor(int number, char character){
 		this.Number = number;
 		this.Character = character;
 
 	}
 	
-	/**
-	 * Constructeur de la couleur à partir d'une couleur préexistante
-	 * 
-	 * @param c Une instance d'EnumColor
-	 */
 	EnumColor(EnumColor c){
 		this.Number = c.getNumber();
 		this.Character =c.getChar();
@@ -51,28 +32,18 @@ public enum EnumColor {
 	}
 
 
-	
-/**
- * Permet de choisir une couleur au hasard
- * @return une couleur de type enumColor parmis celles stockées dans la liste VALUES
- */
+	private static final List<EnumColor> VALUES = Collections.unmodifiableList(Arrays.asList(values()));
+	private static final int SIZE = VALUES.size();
+	private static final Random RANDOM = new Random();
+
 	public static EnumColor randomEnumColor(){
 		return VALUES.get(RANDOM.nextInt(SIZE));
 	}
 	
-	/**
-	 * Permet de récupérer la liste des couleurs
-	 * @return liste des couleurs
-	 */
 	public static List<EnumColor> allEnumColor(){
 		return VALUES;
 	}
 	
-	/**
-	 * Permet de récupérer une couleur à partir de la lettre qui la représente
-	 * @param c Lettre représentant la couleur 
-	 * @return La couleur demandée si elle existe ou null
-	 */
 	public static EnumColor getEnumColorWithChar(char c){
 		for (EnumColor EnumColor : VALUES) {
 			if(EnumColor.getChar() == c){
@@ -82,18 +53,10 @@ public enum EnumColor {
 		return null;
 	}
 
-	/**
-	 * 
-	 * @return Nombre repésentant la couleur
-	 */
 	int getNumber(){
 		return this.Number;
 	}
 	
-	/**
-	 * 
-	 * @return La lettre représentant la couleur
-	 */
 	char getChar(){
 		return this.Character;
 	}

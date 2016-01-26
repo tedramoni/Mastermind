@@ -27,9 +27,11 @@ public class CombinaisonComparaison {
 					this.setNbBlancs(this.getNbBlancs() + 1);
 					com1.removeColorIndex(i);
 					com2.removeColorIndex(j);
-					
 					i--;
 					j--;
+					
+					break;
+					
 				}
 			}
 		}
@@ -51,5 +53,8 @@ public class CombinaisonComparaison {
 		this.nbBlancs = nbBlancs;
 	}
 	
+	public String toString(){
+		return " Noirs : " + this.getNbNoirs() + "  Blancs : " + this.getNbBlancs() + "  - ";
+	}
 }
 
