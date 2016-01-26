@@ -29,7 +29,6 @@ public class MastermindManager extends GameManager {
 	 * Constructeur avec paramètre
 	 * @param type type de partie (joueur humain contre joueur humain ou joueur humain contre IA)
 	 */
-
 	public MastermindManager(EnumMastermindType type){
 
 		this.game = new Mastermind();
@@ -43,14 +42,19 @@ public class MastermindManager extends GameManager {
 			this.player2 = new HumanMastermind("MichMich");
 		}
 	}
+	
+	public MastermindManager(){
+
+		this.game = new Mastermind();
+		this.ui = new UiMastermind();
+	}
 
 	/**
 	 * Classe pour gérer le déroulement de la partie
 	 */
 	@Override
 	public void play() throws IOException {
-
-
+		this.ui.display(EnumEvent.Welcome);
 		this.ui.display(EnumEvent.Welcome);
 
 		Combinaison secretComb = this.player1.getCombinaison();
