@@ -35,7 +35,7 @@ public class Humain extends Player {
 	}
 	@Override
 	public Combinaison getInt() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub //VBO cette méthode sert-elle ?
 		return null;
 	}
 
