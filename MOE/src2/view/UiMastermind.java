@@ -55,6 +55,8 @@ public class UiMastermind extends Ui{
 		case AskCombinaison:
 			this.out.write(("--- Joueur 2 : Devinez la combinaison  ---\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
+			this.out.write(("--- De type (RVVVB) Bleu - B / Vert - V / Jaune - J / Rouge - R / Orange - O / Noir - N / Marron - M / Gris - G \n").getBytes(StandardCharsets.UTF_8));
+			this.out.flush();
 			break;
 		case Quit:
 			this.out.write(("--- QUIT ---\n").getBytes(StandardCharsets.UTF_8));

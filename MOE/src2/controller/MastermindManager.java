@@ -33,11 +33,10 @@ public class MastermindManager extends GameManager {
 
 	public MastermindManager() throws IOException{
 
-		this.game = new Mastermind();
-		this.ui = new UiMastermind();
+
 
 		this.init();
-	
+
 
 	}
 
@@ -64,7 +63,7 @@ public class MastermindManager extends GameManager {
 
 			guessComb = this.player2.getCombinaison();
 
-			while(guessComb == null || secretComb.getNbColor()<5 || secretComb.getNbColor()>5){
+			while(guessComb == null || guessComb.getNbColor()<5 || guessComb.getNbColor()>5){
 				this.ui.display(EnumEvent.InputError);
 				guessComb = this.player1.getCombinaison();
 			}
@@ -86,6 +85,7 @@ public class MastermindManager extends GameManager {
 				this.ui.display(EnumEvent.Win);
 				init();
 
+
 			}
 		}
 
@@ -94,8 +94,12 @@ public class MastermindManager extends GameManager {
 
 	@Override
 	public void init() throws IOException {
+		this.game = new Mastermind();
+		this.ui = new UiMastermind();		
 		this.ui.display(EnumEvent.Welcome);
-		this.ui.display(EnumEvent.ChoicePartie);
+		this.ui.display(EnumEvent.ChoicePartie);	
+		this.player1 = null;
+		this.player2 = null;
 		this.elephantMode=false;
 		this.type=null;
 		this.player2 = new HumanMastermind("Michel");
