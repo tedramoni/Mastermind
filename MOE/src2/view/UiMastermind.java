@@ -39,9 +39,9 @@ public class UiMastermind extends Ui{
 			this.out.flush();
 			this.out.write(("	2 : Jouer contre l'ordinateur\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
-			this.out.write(("	3 : Jouer contre un autre joueur avec option Elephant\n").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("	3 : Jouer contre un ordinateur avec option Elephant\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
-			this.out.write(("	4 : Jouer contre un ordinateur avec option Elephant\n").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("	4 : Jouer contre un autre joueur avec option Elephant\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case Welcome:

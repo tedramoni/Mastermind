@@ -82,7 +82,7 @@ public class CombinaisonComparaison {
 	 * Méthode toString redéfinie pour afficher le nombre de jetons blancs et le nombre de jetons noirs
 	 */
 	public String toString(){
-		return " Noirs : " + this.getNbNoirs() + "  Blancs : " + this.getNbBlancs() + "  - ";
+		return "Noirs : " + this.getNbNoirs() + "  Blancs : " + this.getNbBlancs() + "\n" ;
 	}
 }
 

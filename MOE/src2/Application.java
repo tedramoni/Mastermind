@@ -10,7 +10,7 @@ public class Application {
 		System.out.println("------------------APPLICATION------------------");
 		MastermindManager manager = new MastermindManager();
 		//MastermindManager manager = new MastermindManager(EnumMastermindType.HvsH);
-		manager.play();
+
 		
 	}
 	

@@ -17,7 +17,7 @@ public class Mastermind extends Game {
 	
 	private int TryMax = 10;
 	private int Try = 0;
-	private int SizeCombinaison = 4;
+	private int SizeCombinaison = 5;
 	private Combinaison secretCombinaison;
 	private List<Combinaison> TabTryCombinaison = new ArrayList<Combinaison>();
 	private List<CombinaisonComparaison> TabResultTry = new ArrayList<CombinaisonComparaison>();
@@ -76,7 +76,7 @@ public class Mastermind extends Game {
 		String s ="";
 		
 		for(int i = 0; i < this.TabTryCombinaison.size();i++){
-			s = s + "["+i+"] " + this.TabTryCombinaison.get(i).toString() + this.TabResultTry.get(i).toString() + "\n";
+			s = s + "["+i+"] " + this.TabTryCombinaison.get(i).toString() + this.TabResultTry.get(i).toString() ;
 		}
 		
 		return s;

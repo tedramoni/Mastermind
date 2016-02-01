@@ -44,23 +44,23 @@ public class HumanMastermind extends PlayerMastermind {
 		return in.readLine().toUpperCase();	
 	}
 
-	public int getInt() throws IOException{
-		String txt = in.readLine();
-		return Integer.parseInt(txt);
-	}
 
 	@Override
 	public EnumMastermindType choicePartie() throws IOException {
-		int i = this.getInt();	
-		if(i==1)
-			return EnumMastermindType.HvsH;
-		else if(i==2)
-			return EnumMastermindType.HvsIA;
-		else if(i==3)
-			return EnumMastermindType.HvsIAE;
-		else if(i==4)
-			return EnumMastermindType.HvsHE;
+		String temp = in.readLine();
+		try{
+			int i = Integer.parseInt(temp);
+			if(i==1)
+				return EnumMastermindType.HvsH;
+			else if(i==2)
+				return EnumMastermindType.HvsIA;
+			else if(i==3)
+				return EnumMastermindType.HvsIAE;
+			else if(i==4)
+				return EnumMastermindType.HvsHE;
+		}catch(NumberFormatException e){return null;}
 		return null;
+
 	}
 
 }

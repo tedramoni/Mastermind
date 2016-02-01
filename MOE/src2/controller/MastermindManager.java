@@ -35,32 +35,9 @@ public class MastermindManager extends GameManager {
 
 		this.game = new Mastermind();
 		this.ui = new UiMastermind();
-		this.ui.display(EnumEvent.Welcome);
-		this.ui.display(EnumEvent.ChoicePartie);
-		this.player2 = new HumanMastermind("Michel");
-		this.type = this.player2.choicePartie();
 
-		while(type == null){
-			this.ui.display(EnumEvent.InputError);
-			type = this.player2.choicePartie();
-		}
-
-		if(type == EnumMastermindType.HvsH)
-			this.player1 = new HumanMastermind("Jean");
-
-		else if(type == EnumMastermindType.HvsIA){
-			this.player1 = new IaMastermind();
-
-		}else if(type == EnumMastermindType.HvsIAE){
-			this.player1 = new IaMastermind();
-			this.elephantMode = true;
-
-		}else if(type == EnumMastermindType.HvsHE){
-			this.player1 = new HumanMastermind("Jean");
-			this.elephantMode = true;
-		}
-
-		this.play();
+		this.init();
+	
 
 	}
 
@@ -87,22 +64,28 @@ public class MastermindManager extends GameManager {
 
 			guessComb = this.player2.getCombinaison();
 
-			while(guessComb == null){
+			while(guessComb == null || secretComb.getNbColor()<5 || secretComb.getNbColor()>5){
 				this.ui.display(EnumEvent.InputError);
 				guessComb = this.player1.getCombinaison();
 			}
 
 			CombinaisonComparaison result = this.game.tryCombinaison(guessComb);
-			
-			if(this.elephantMode == false){
+
+
+
+			if(this.elephantMode == false)
 				this.ui.displayHistory(this.game.toString());
-			}
-			//this.ui.displayResultComparaison(result);
+			else this.ui.displayResultComparaison(result);
+
+
 			if(this.game.isLoose()){
 				this.ui.display(EnumEvent.Loose);
+				init();
 			}
 			if(this.game.isWin()){
 				this.ui.display(EnumEvent.Win);
+				init();
+
 			}
 		}
 
@@ -110,8 +93,34 @@ public class MastermindManager extends GameManager {
 	}
 
 	@Override
-	public void init() {
-		// TODO Auto-generated method stub
+	public void init() throws IOException {
+		this.ui.display(EnumEvent.Welcome);
+		this.ui.display(EnumEvent.ChoicePartie);
+		this.elephantMode=false;
+		this.type=null;
+		this.player2 = new HumanMastermind("Michel");
+		this.type = this.player2.choicePartie();
+
+		while(type == null){
+			this.ui.display(EnumEvent.InputError);
+			type = this.player2.choicePartie();
+		}
+
+		if(type == EnumMastermindType.HvsH)
+			this.player1 = new HumanMastermind("Jean");
+
+		else if(type == EnumMastermindType.HvsIA){
+			this.player1 = new IaMastermind();
+
+		}else if(type == EnumMastermindType.HvsIAE){
+			this.player1 = new IaMastermind();
+			this.elephantMode = true;
+
+		}else if(type == EnumMastermindType.HvsHE){
+			this.player1 = new HumanMastermind("Jean");
+			this.elephantMode = true;
+		}
+		this.play();
 
 	}
 
