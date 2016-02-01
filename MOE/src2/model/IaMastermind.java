@@ -1,5 +1,6 @@
 package model;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,9 +16,16 @@ public class IaMastermind extends PlayerMastermind {
 		listColor.add(1, EnumColor.randomEnumColor());
 		listColor.add(2, EnumColor.randomEnumColor());
 		listColor.add(3, EnumColor.randomEnumColor());
+		listColor.add(4, EnumColor.randomEnumColor());
 
 		Combinaison secret = new Combinaison(listColor);
 		return secret;
+	}
+
+	@Override
+	public EnumMastermindType choicePartie() throws IOException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

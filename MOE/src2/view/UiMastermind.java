@@ -35,42 +35,45 @@ public class UiMastermind extends Ui{
 
 		switch (event) {
 		case ChoicePartie:
-			this.out.write(("	1 : Jouer contre un autre joueur").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("	1 : Jouer contre un autre joueur\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
-			this.out.write(("	2 : Jouer contre l'ordinateur").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("	2 : Jouer contre l'ordinateur\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
-			this.out.write(("	3 : Jouer contre un autre joueur avec option Elephant").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("	3 : Jouer contre un autre joueur avec option Elephant\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
-			this.out.write(("	4 : Jouer contre un ordinateur avec option Elephant").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("	4 : Jouer contre un ordinateur avec option Elephant\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
+			break;
 		case Welcome:
 			this.out.write(("--- WELCOME --- \n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
-			this.out.write(("--- Cachotier : Rentrez une combinaison  ---").getBytes(StandardCharsets.UTF_8));
+			break;
+		case AskCachotier:
+			this.out.write(("--- Cachotier : Rentrez une combinaison : Bleu - B / Vert - V / Jaune - J / Rouge - R / Orange - O / Noir - N / Marron - M / Gris - G \n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case AskCombinaison:
-			this.out.write(("--- Joueur 2 : Devinez la combinaison  ---").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("--- Joueur 2 : Devinez la combinaison  ---\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case Quit:
-			this.out.write(("--- QUIT ---").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("--- QUIT ---\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case Loose:
-			this.out.write(("--- LOOSE ---").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("--- LOOSE ---\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case Win:
-			this.out.write(("--- WIN ---").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("--- WIN ---\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case Rules:
-			this.out.write(("--- RULES ---").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("--- RULES ---\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case InputError:
-			this.out.write(("--- Veuillez ressaisir votre combinaison  ---").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("--- Erreur lors de la saisie - Recommencez svp ---\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		default:
@@ -88,7 +91,7 @@ public class UiMastermind extends Ui{
 		this.out.write(resultat.toString().getBytes(StandardCharsets.UTF_8));
 		this.out.flush();
 	}
-	
+
 	/**
 	 * Fonction pour afficher l'historique de la partie
 	 * @param history

@@ -14,10 +14,14 @@ public enum EnumColor {
 
 	//Objets directement construits
 
-	Blue(0, 'B'),
-	Red(1, 'R'),
-	Yellow(2, 'Y'),
-	Green(3, 'G');
+	Bleu(0, 'B'),
+	Vert(1, 'V'),
+	Jaune(2, 'J'),
+	Rouge(3, 'R'),
+	Orange(4, 'O'),
+    Noir(5, 'N'),
+    Marron(6, 'M'),
+    Gris(7, 'G');
 
 	private int Number = 0;
 	private char Character = '.';

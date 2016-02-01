@@ -21,32 +21,47 @@ public class MastermindManager extends GameManager {
 	private PlayerMastermind player2;
 	protected UiMastermind ui;
 	protected Mastermind game;
+	private boolean elephantMode = false;
+	private EnumMastermindType type;
 
 
 
-	
 	/**
 	 * Constructeur avec paramètre
 	 * @param type type de partie (joueur humain contre joueur humain ou joueur humain contre IA)
 	 */
-	public MastermindManager(EnumMastermindType type){
+
+	public MastermindManager() throws IOException{
 
 		this.game = new Mastermind();
 		this.ui = new UiMastermind();
+		this.ui.display(EnumEvent.Welcome);
+		this.ui.display(EnumEvent.ChoicePartie);
+		this.player2 = new HumanMastermind("Michel");
+		this.type = this.player2.choicePartie();
 
-		if(type == EnumMastermindType.HvsH){
-			this.player1 = new HumanMastermind("Jean");
-			this.player2 = new HumanMastermind("Michel");
-		}else if(type == EnumMastermindType.HvsIA){
-			this.player1 = new IaMastermind();
-			this.player2 = new HumanMastermind("MichMich");
+		while(type == null){
+			this.ui.display(EnumEvent.InputError);
+			type = this.player2.choicePartie();
 		}
-	}
-	
-	public MastermindManager(){
 
-		this.game = new Mastermind();
-		this.ui = new UiMastermind();
+		if(type == EnumMastermindType.HvsH)
+			this.player1 = new HumanMastermind("Jean");
+
+		else if(type == EnumMastermindType.HvsIA){
+			this.player1 = new IaMastermind();
+
+		}else if(type == EnumMastermindType.HvsIAE){
+			this.player1 = new IaMastermind();
+			this.elephantMode = true;
+
+		}else if(type == EnumMastermindType.HvsHE){
+			this.player1 = new HumanMastermind("Jean");
+			this.elephantMode = true;
+		}
+
+		this.play();
+
 	}
 
 	/**
@@ -54,15 +69,15 @@ public class MastermindManager extends GameManager {
 	 */
 	@Override
 	public void play() throws IOException {
-		this.ui.display(EnumEvent.Welcome);
-		this.ui.display(EnumEvent.Welcome);
+		if(this.type == EnumMastermindType.HvsH || this.type == EnumMastermindType.HvsHE )
+			this.ui.display(EnumEvent.AskCachotier);
 
 		Combinaison secretComb = this.player1.getCombinaison();
-		while(secretComb == null){
+		while(secretComb == null || secretComb.getNbColor()<5 || secretComb.getNbColor()>5 ){
 			this.ui.display(EnumEvent.InputError);
 			secretComb = this.player1.getCombinaison();
 		}
-		
+
 		Combinaison guessComb;
 
 		this.game.setCombinaison(secretComb);
@@ -76,10 +91,12 @@ public class MastermindManager extends GameManager {
 				this.ui.display(EnumEvent.InputError);
 				guessComb = this.player1.getCombinaison();
 			}
-			
-			CombinaisonComparaison result = this.game.tryCombinaison(guessComb);
 
-			this.ui.displayHistory(this.game.toString());
+			CombinaisonComparaison result = this.game.tryCombinaison(guessComb);
+			
+			if(this.elephantMode == false){
+				this.ui.displayHistory(this.game.toString());
+			}
 			//this.ui.displayResultComparaison(result);
 			if(this.game.isLoose()){
 				this.ui.display(EnumEvent.Loose);

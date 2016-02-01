@@ -1,5 +1,5 @@
 package model;
 
 public enum EnumMastermindType {
-	HvsH, HvsIA
+	HvsH, HvsIA, HvsIAE, HvsHE
 }
