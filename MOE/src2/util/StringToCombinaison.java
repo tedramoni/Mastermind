@@ -12,7 +12,7 @@ import model.EnumColor;
  */
 public class StringToCombinaison {
 	
-	public static final Combinaison getCombinaison(String s){
+	public final static Combinaison getCombinaison(String s){
 		
 		List<EnumColor> listColor=  new ArrayList<EnumColor>();
 		EnumColor c = null;
