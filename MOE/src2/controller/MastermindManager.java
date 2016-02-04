@@ -27,17 +27,11 @@ public class MastermindManager extends GameManager {
 
 
 	/**
-	 * Constructeur avec paramètre
-	 * @param type type de partie (joueur humain contre joueur humain ou joueur humain contre IA)
+	 * Constructeur sans paramètres
 	 */
 
 	public MastermindManager() throws IOException{
-
-
-
 		this.init();
-
-
 	}
 
 	/**
@@ -105,8 +99,17 @@ public class MastermindManager extends GameManager {
 		this.player2 = new HumanMastermind("Michel");
 		this.type = this.player2.choicePartie();
 
-		while(type == null){
-			this.ui.display(EnumEvent.InputError);
+		while(type == null || type == EnumMastermindType.Quit || type == EnumMastermindType.Rules){
+
+			if(this.type == null)
+				this.ui.display(EnumEvent.InputError);			
+			else if(this.type == EnumMastermindType.Rules){
+				this.ui.display(EnumEvent.Rules);
+				this.ui.display(EnumEvent.ChoicePartie);
+			}
+			else if(this.type == EnumMastermindType.Quit)
+				this.quit();
+
 			type = this.player2.choicePartie();
 		}
 

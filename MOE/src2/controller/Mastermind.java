@@ -14,7 +14,7 @@ import model.Game;
  *
  */
 public class Mastermind extends Game {
-	
+
 	private int TryMax = 10;
 	private int Try = 0;
 	private int SizeCombinaison = 5;
@@ -22,13 +22,13 @@ public class Mastermind extends Game {
 	private List<Combinaison> TabTryCombinaison = new ArrayList<Combinaison>();
 	private List<CombinaisonComparaison> TabResultTry = new ArrayList<CombinaisonComparaison>();
 
-	
+
 	@Override
 	public void initialisation() {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 	/**
 	 * Setter de TabTryCombinaison
 	 * @return La liste des combinaison tentée par le joueur
@@ -44,7 +44,7 @@ public class Mastermind extends Game {
 	public void setCombinaison(Combinaison newCombinaison){
 		this.secretCombinaison = newCombinaison;
 	}
-	
+
 	/**
 	 * Méthode correspondant à un tour de Mastermind
 	 * @param tryedCombinaison La combinaison à essayer
@@ -52,33 +52,33 @@ public class Mastermind extends Game {
 	 */
 	public CombinaisonComparaison tryCombinaison(Combinaison tryedCombinaison){
 		CombinaisonComparaison c = new CombinaisonComparaison(new Combinaison(secretCombinaison), new Combinaison(tryedCombinaison));
-		
+
 		TabTryCombinaison.add(tryedCombinaison);
 		TabResultTry.add(c);
-		
+
 		this.Try ++;
-		
+
 		if(c.getNbNoirs() == this.SizeCombinaison){
 			this.setState(EnumGameState.Win);
 		}
 		if(!this.isThereTryLeft()){
 			this.setState(EnumGameState.Lost);
 		}
-		
+
 		return c;
 	}
-	
+
 	/**
 	 * 
 	 * @return Le numéro du coup et la combinaison entrée par l'utilisateur sous forme de String
 	 */
 	public String toString(){
 		String s ="";
-		
+
 		for(int i = 0; i < this.TabTryCombinaison.size();i++){
 			s = s + "["+i+"] " + this.TabTryCombinaison.get(i).toString() + this.TabResultTry.get(i).toString() ;
 		}
-		
+
 		return s;
 	}
 	/**
@@ -87,5 +87,21 @@ public class Mastermind extends Game {
 	 */
 	public boolean isThereTryLeft(){
 		return (TabTryCombinaison.size() < this.TryMax);
+	}
+
+	/**
+	 * Getter du nombre d'essai du joueur
+	 * @return un int 
+	 */
+	public int getTry(){
+		return this.Try;
+	}
+
+	/**
+	 * Setter du nombre d'essai du joueur
+	 * @param un int 
+	 */
+	public void setTry(int t){
+		this.Try = t;
 	}
 }

@@ -1,14 +1,8 @@
 package view;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
-import java.util.List;
-
 import util.CombinaisonComparaison;
-import model.Combinaison;
 import model.EnumEvent;
 import model.Ui;
 
@@ -43,6 +37,10 @@ public class UiMastermind extends Ui{
 			this.out.flush();
 			this.out.write(("	4 : Jouer contre un autre joueur avec option Elephant\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
+			this.out.write(("	5 : Afficher les règles\n").getBytes(StandardCharsets.UTF_8));
+			this.out.flush();
+			this.out.write(("	6 : Quitter le jeu\n").getBytes(StandardCharsets.UTF_8));
+			this.out.flush();
 			break;
 		case Welcome:
 			this.out.write(("--- WELCOME --- \n").getBytes(StandardCharsets.UTF_8));
@@ -72,6 +70,8 @@ public class UiMastermind extends Ui{
 			break;
 		case Rules:
 			this.out.write(("--- RULES ---\n").getBytes(StandardCharsets.UTF_8));
+			this.out.flush();
+			this.out.write(("Ce sont les règles du mastermind\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case InputError:

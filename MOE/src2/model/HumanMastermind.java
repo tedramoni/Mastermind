@@ -58,6 +58,10 @@ public class HumanMastermind extends PlayerMastermind {
 				return EnumMastermindType.HvsIAE;
 			else if(i==4)
 				return EnumMastermindType.HvsHE;
+			else if(i==5)
+				return EnumMastermindType.Rules;
+			else if(i==4)
+				return EnumMastermindType.Quit;
 		}catch(NumberFormatException e){return null;}
 		return null;
 

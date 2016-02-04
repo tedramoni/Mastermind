@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Combinaison {
 	private int NbColor;
-	private List<EnumColor> TabCombinaison;
+	private List<EnumColor> TabCombinaison = null;
 	
 	/**
 	 * Constructeur de combinaison à partir d'une liste
