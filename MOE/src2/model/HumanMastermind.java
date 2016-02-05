@@ -39,12 +39,19 @@ public class HumanMastermind extends PlayerMastermind {
 		return StringToCombinaison.getCombinaison(line);
 
 	}
-
+	
+/**
+ * 
+ * @return la string ecrite par l'utilisateur => mis en majuscule
+ * @throws IOException
+ */
 	public String getString() throws IOException{
 		return in.readLine().toUpperCase();	
 	}
 
-
+	/**
+	 * Recupération du choix de partie de l'utilisateur
+	 */
 	@Override
 	public EnumMastermindType choicePartie() throws IOException {
 		String temp = in.readLine();

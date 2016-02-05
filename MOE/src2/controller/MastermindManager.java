@@ -85,7 +85,13 @@ public class MastermindManager extends GameManager {
 
 
 	}
-
+	/**
+	 * Fonction d'initialisation d'une partie 
+	 * 
+	 * Choix du type de partie 
+	 * Affichage des règles
+	 * Quitter la partie 
+	 */
 	@Override
 	public void init() throws IOException {
 		this.game = new Mastermind();

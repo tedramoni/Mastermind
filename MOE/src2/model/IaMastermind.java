@@ -9,6 +9,10 @@ import model.Combinaison;
 
 public class IaMastermind extends PlayerMastermind {
 
+	/**
+	 * Création de la combinaison secrete par l'IA
+	 * @return la combinaison secrète créée 
+	 */
 	@Override
 	public Combinaison getCombinaison() {
 		List<EnumColor> listColor =  new ArrayList<EnumColor>();
