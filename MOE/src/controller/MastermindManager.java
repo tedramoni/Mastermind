@@ -12,7 +12,7 @@ import view.UiMastermind;
 
 /**
  * 
- * Classe qui permet de gérer le déroulement de la partie
+ * Classe qui permet de gï¿½rer le dï¿½roulement de la partie
  *
  */
 public class MastermindManager extends GameManager {
@@ -27,7 +27,7 @@ public class MastermindManager extends GameManager {
 
 
 	/**
-	 * Constructeur sans paramètres
+	 * Constructeur sans paramï¿½tres
 	 */
 
 	public MastermindManager() throws IOException{
@@ -35,7 +35,7 @@ public class MastermindManager extends GameManager {
 	}
 
 	/**
-	 * Classe pour gérer le déroulement de la partie
+	 * Classe pour gï¿½rer le dï¿½roulement de la partie
 	 */
 	@Override
 	public void play() throws IOException {
@@ -46,6 +46,12 @@ public class MastermindManager extends GameManager {
 		while(secretComb == null || secretComb.getNbColor()<5 || secretComb.getNbColor()>5 ){
 			this.ui.display(EnumEvent.InputError);
 			secretComb = this.player1.getCombinaison();
+		}
+
+		try {
+			new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 
 		Combinaison guessComb;
@@ -89,7 +95,7 @@ public class MastermindManager extends GameManager {
 	 * Fonction d'initialisation d'une partie 
 	 * 
 	 * Choix du type de partie 
-	 * Affichage des règles
+	 * Affichage des rï¿½gles
 	 * Quitter la partie 
 	 */
 	@Override

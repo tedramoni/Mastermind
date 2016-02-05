@@ -7,7 +7,7 @@ import java.io.IOException;
  * 
  * Classe abstraite donnant les fonctions que peut faire le joueur :
  * 
- * recupérer la combinaison
+ * recupï¿½rer la combinaison
  * choix de partie
  *
  */

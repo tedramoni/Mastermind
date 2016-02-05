@@ -10,8 +10,8 @@ import model.Combinaison;
 public class IaMastermind extends PlayerMastermind {
 
 	/**
-	 * Création de la combinaison secrete par l'IA
-	 * @return la combinaison secrète créée 
+	 * CrÃ©ation de la combinaison secrete par l'IA
+	 * @return la combinaison secrÃ¨te crÃ©Ã©e
 	 */
 	@Override
 	public Combinaison getCombinaison() {

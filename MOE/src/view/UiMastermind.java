@@ -7,7 +7,7 @@ import model.EnumEvent;
 import model.Ui;
 
 /**
- * Classe pour afficher le menu à l'écran
+ * Classe pour afficher le menu ï¿½ l'ï¿½cran
  *
  */
 public class UiMastermind extends Ui{
@@ -15,14 +15,14 @@ public class UiMastermind extends Ui{
 	protected OutputStream out;
 
 	/**
-	 * Constructeur sans paramètre
+	 * Constructeur sans paramï¿½tre
 	 */
 	public UiMastermind(){
 		this.out = System.out;
 	}
 
 	/**
-	 * Fonction pour afficher le menu à l'écran
+	 * Fonction pour afficher le menu ï¿½ l'ï¿½cran
 	 */
 	@Override
 	public void display(EnumEvent event) throws IOException {
@@ -37,7 +37,7 @@ public class UiMastermind extends Ui{
 			this.out.flush();
 			this.out.write(("	4 : Jouer contre un autre joueur avec option Elephant\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
-			this.out.write(("	5 : Afficher les règles\n").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("	5 : Afficher les rï¿½gles\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			this.out.write(("	6 : Quitter le jeu\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
@@ -71,7 +71,7 @@ public class UiMastermind extends Ui{
 		case Rules:
 			this.out.write(("--- RULES ---\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
-			this.out.write(("Ce sont les règles du mastermind\n").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("Ce sont les rï¿½gles du mastermind\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case InputError:
@@ -104,7 +104,5 @@ public class UiMastermind extends Ui{
 		this.out.write(history.getBytes(StandardCharsets.UTF_8));
 		this.out.flush();
 	}
-
-
 
 }

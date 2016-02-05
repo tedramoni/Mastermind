@@ -1,15 +1,11 @@
 package model;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.io.*;
 
 import util.StringToCombinaison;
 
 /**
  * 
- * Classe HumanMastermind pour décrire la combinaison donnée par le joueur humain
+ * Classe HumanMastermind pour dï¿½crire la combinaison donnï¿½e par le joueur humain
  *
  */
 public class HumanMastermind extends PlayerMastermind {
@@ -17,11 +13,13 @@ public class HumanMastermind extends PlayerMastermind {
 	private BufferedReader in;
 	private BufferedWriter out;
 
+	private Console console = System.console();
+
 	private String pseudo = "DefaultHuman";
 
 	/**
-	 * Constructeur avec paramètre
-	 * @param s paramètre pour le pseudo du joueur humain
+	 * Constructeur avec paramï¿½tre
+	 * @param s paramï¿½tre pour le pseudo du joueur humain
 	 */
 	public HumanMastermind(String s) {
 		this.pseudo = s;
@@ -30,11 +28,11 @@ public class HumanMastermind extends PlayerMastermind {
 	}
 
 	/**
-	 * Recupère la combinaison donnée par le joueur humain
+	 * Recupï¿½re la combinaison donnï¿½e par le joueur humain
 	 */
 	@Override
 	public Combinaison getCombinaison() throws IOException {
-		String line = this.getString();	
+		String line = this.getString();
 
 		return StringToCombinaison.getCombinaison(line);
 
@@ -50,7 +48,7 @@ public class HumanMastermind extends PlayerMastermind {
 	}
 
 	/**
-	 * Recupération du choix de partie de l'utilisateur
+	 * Recupï¿½ration du choix de partie de l'utilisateur
 	 */
 	@Override
 	public EnumMastermindType choicePartie() throws IOException {
