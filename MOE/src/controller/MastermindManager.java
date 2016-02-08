@@ -61,8 +61,10 @@ public class MastermindManager extends GameManager {
 
 			while(guessComb == null || guessComb.getNbColor()<5 || guessComb.getNbColor()>5){
 				this.ui.display(EnumEvent.InputError);
-				guessComb = this.player1.getCombinaison();
+				guessComb = this.player2.getCombinaison();
 			}
+
+			this.ui.clearScreen();
 
 			CombinaisonComparaison result = this.game.tryCombinaison(guessComb);
 
