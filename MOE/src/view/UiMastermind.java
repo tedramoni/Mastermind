@@ -43,7 +43,7 @@ public class UiMastermind extends Ui{
 			this.out.flush();
 			break;
 		case Welcome:
-			this.out.write(("--- WELCOME --- \n").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("--------------- WELCOME ------------------ \n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case AskCachotier:
@@ -57,15 +57,19 @@ public class UiMastermind extends Ui{
 			this.out.flush();
 			break;
 		case Quit:
-			this.out.write(("--- QUIT ---\n").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("------------ QUIT ---------\n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case Loose:
-			this.out.write(("--- LOOSE ---\n").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("--------- LOOSE ---------\n").getBytes(StandardCharsets.UTF_8));
+			this.out.flush();
+			this.out.write(("Appuyer sur ENTREE pour acceder au menu ! \n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 		case Win:
-			this.out.write(("--- WIN ---\n").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("--------- WIN ---------\n").getBytes(StandardCharsets.UTF_8));
+			this.out.flush();
+			this.out.write(("Appuyer sur ENTREE pour acceder au menu ! \n").getBytes(StandardCharsets.UTF_8));
 			this.out.flush();
 			break;
 			case Rules:
@@ -77,14 +81,14 @@ public class UiMastermind extends Ui{
 
 			this.out.write(("Le but du jeu est de determiner la combinaison secrete defini par le joueur adverse.\n").getBytes(StandardCharsets.UTF_8));
 
-			this.out.write(("Le joueur qui doit trouver la combinaison secrete gagne des lors qu’il y parvient en un maximum de 10 coups.\n").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("Le joueur qui doit trouver la combinaison secrete gagne des lors qu'il y parvient en un maximum de 10 coups.\n").getBytes(StandardCharsets.UTF_8));
 
-			this.out.write(("Le joueur qui a conçu la combinaison secrete remporte la manche quand son adversaire n’est pas parvenu a trouve la combinaison en 10 coups.\n\n").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("Le joueur qui a concu la combinaison secrete remporte la manche quand son adversaire n'est pas parvenu a trouve la combinaison en 10 coups.\n\n").getBytes(StandardCharsets.UTF_8));
 			this.out.write(("Commencer une partie de MasterMind\n\n").getBytes(StandardCharsets.UTF_8));
 
 			this.out.write(("Pour commencer, il vous faut decider entre vous et votre adversaire lequel elabore la combinaison secrete.\n").getBytes(StandardCharsets.UTF_8));
 
-			this.out.write(("Le joueur ayant le role de cachotier elabore alors sa combinaison de couleur et la saisit dans la console, sans bien entendu la devoiler a l’autre joueur.\n").getBytes(StandardCharsets.UTF_8));
+			this.out.write(("Le joueur ayant le role de cachotier elabore alors sa combinaison de couleur et la saisit dans la console, sans bien entendu la devoiler a l'autre joueur.\n").getBytes(StandardCharsets.UTF_8));
 
 			this.out.write(("Le second peut alors commencer a faire des propositions de combinaisons. Pour cela, il doit egalement saisir une combinaison de 5 lettres dans la console.\n\n").getBytes(StandardCharsets.UTF_8));
 			this.out.write(("Si la combinaison est incorrecte\n\n").getBytes(StandardCharsets.UTF_8));
@@ -145,7 +149,7 @@ public class UiMastermind extends Ui{
 	 */
 	public void displayTryLeft(int tryLeft) throws IOException {
 
-		this.out.write(("Nombre de coups restants : "+tryLeft+"\n").getBytes(StandardCharsets.UTF_8));
+		this.out.write(("Nombre de coups restants : " + tryLeft + "\n").getBytes(StandardCharsets.UTF_8));
 		this.out.flush();
 	}
 

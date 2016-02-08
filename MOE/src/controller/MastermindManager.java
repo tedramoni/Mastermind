@@ -75,14 +75,14 @@ public class MastermindManager extends GameManager {
 
 			if(this.game.isLoose()){
 				this.ui.display(EnumEvent.Loose);
-				if(this.player1.waitInput() == true){
+				if(this.player2.waitInput() == true){
 					this.ui.clearScreen();
 				}
 				init();
 			}
 			if(this.game.isWin()){
 				this.ui.display(EnumEvent.Win);
-				if(this.player1.waitInput() == true){
+				if(this.player2.waitInput() == true){
 					this.ui.clearScreen();
 				}
 				init();
