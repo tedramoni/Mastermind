@@ -6,7 +6,7 @@ import controller.MastermindManager;
 
 public class Application {
 	
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws IOException, InterruptedException {
 		System.out.println("------------------APPLICATION------------------");
 		MastermindManager manager = new MastermindManager();
 		//MastermindManager manager = new MastermindManager(EnumMastermindType.HvsH);

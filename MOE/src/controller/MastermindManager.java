@@ -30,7 +30,7 @@ public class MastermindManager extends GameManager {
 	 * Constructeur sans param�tres
 	 */
 
-	public MastermindManager() throws IOException{
+	public MastermindManager() throws IOException, InterruptedException {
 		this.init();
 	}
 
@@ -38,7 +38,7 @@ public class MastermindManager extends GameManager {
 	 * Classe pour g�rer le d�roulement de la partie
 	 */
 	@Override
-	public void play() throws IOException {
+	public void play() throws IOException, InterruptedException {
 		if(this.type == EnumMastermindType.HvsH || this.type == EnumMastermindType.HvsHE )
 			this.ui.display(EnumEvent.AskCachotier);
 
@@ -48,11 +48,7 @@ public class MastermindManager extends GameManager {
 			secretComb = this.player1.getCombinaison();
 		}
 
-		try {
-			new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		this.ui.clearScreen();
 
 		Combinaison guessComb;
 
@@ -70,7 +66,7 @@ public class MastermindManager extends GameManager {
 
 			CombinaisonComparaison result = this.game.tryCombinaison(guessComb);
 
-
+			this.ui.displayTryLeft(this.game.getTryMax() - this.game.getTry());
 
 			if(this.elephantMode == false)
 				this.ui.displayHistory(this.game.toString());
@@ -79,27 +75,31 @@ public class MastermindManager extends GameManager {
 
 			if(this.game.isLoose()){
 				this.ui.display(EnumEvent.Loose);
+				if(this.player1.waitInput() == true){
+					this.ui.clearScreen();
+				}
 				init();
 			}
 			if(this.game.isWin()){
 				this.ui.display(EnumEvent.Win);
+				if(this.player1.waitInput() == true){
+					this.ui.clearScreen();
+				}
 				init();
-
-
 			}
 		}
 
 
 	}
 	/**
-	 * Fonction d'initialisation d'une partie 
-	 * 
-	 * Choix du type de partie 
+	 * Fonction d'initialisation d'une partie
+	 *
+	 * Choix du type de partie
 	 * Affichage des r�gles
-	 * Quitter la partie 
+	 * Quitter la partie
 	 */
 	@Override
-	public void init() throws IOException {
+	public void init() throws IOException, InterruptedException {
 		this.game = new Mastermind();
 		this.ui = new UiMastermind();		
 		this.ui.display(EnumEvent.Welcome);
@@ -120,7 +120,7 @@ public class MastermindManager extends GameManager {
 				this.ui.display(EnumEvent.ChoicePartie);
 			}
 			else if(this.type == EnumMastermindType.Quit)
-				this.quit();
+				this.quit(0);
 
 			type = this.player2.choicePartie();
 		}
@@ -143,9 +143,13 @@ public class MastermindManager extends GameManager {
 
 	}
 
+	/**
+	 * Fonction pour quitter l'application
+	 * Quitter la partie
+	 * status = 0 sans erreurs, 1 avec erreurs
+	 */
 	@Override
-	public void quit() {
-		// TODO Auto-generated method stub
-
+	public void quit(int status) {
+		System.exit(status);
 	}
 }

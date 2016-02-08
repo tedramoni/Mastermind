@@ -10,7 +10,7 @@ public abstract class GameManager {
 	/*protected Ui ui;
 	protected Game game;*/
 	
-	public abstract void play() throws IOException;
-	public abstract void init() throws IOException;
-	public abstract void quit() throws IOException;
+	public abstract void play() throws IOException, InterruptedException;
+	public abstract void init() throws IOException, InterruptedException;
+	public abstract void quit(int status) throws IOException;
 }

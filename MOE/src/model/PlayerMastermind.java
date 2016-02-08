@@ -15,6 +15,6 @@ public abstract class PlayerMastermind {
 	
 	public abstract Combinaison getCombinaison() throws IOException;
 	public abstract EnumMastermindType choicePartie() throws IOException;
-	
+	public abstract boolean waitInput() throws IOException;
 
-}
+	}

@@ -32,4 +32,9 @@ public class IaMastermind extends PlayerMastermind {
 		return null;
 	}
 
+	@Override
+	public boolean waitInput() throws IOException {
+		return false;
+	}
+
 }

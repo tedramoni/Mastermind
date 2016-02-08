@@ -98,6 +98,14 @@ public class Mastermind extends Game {
 	}
 
 	/**
+	 * Getter du nombre d'essai total de la partie
+	 * @return un int
+	 */
+	public int getTryMax(){
+		return this.TryMax;
+	}
+
+	/**
 	 * Setter du nombre d'essai du joueur
 	 * @param un int 
 	 */

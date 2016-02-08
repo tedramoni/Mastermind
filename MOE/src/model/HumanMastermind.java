@@ -60,16 +60,30 @@ public class HumanMastermind extends PlayerMastermind {
 			else if(i==2)
 				return EnumMastermindType.HvsIA;
 			else if(i==3)
-				return EnumMastermindType.HvsIAE;
-			else if(i==4)
 				return EnumMastermindType.HvsHE;
+			else if(i==4)
+				return EnumMastermindType.HvsIAE;
 			else if(i==5)
 				return EnumMastermindType.Rules;
-			else if(i==4)
+			else if(i==6)
 				return EnumMastermindType.Quit;
 		}catch(NumberFormatException e){return null;}
 		return null;
 
+	}
+
+	/**
+	 * Recup�ration du choix de partie de l'utilisateur
+	 */
+	@Override
+	public boolean waitInput() throws IOException {
+		String temp = in.readLine();
+		if(!temp.isEmpty() || temp != null){
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 }
