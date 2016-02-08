@@ -63,7 +63,7 @@ public class UiMastermind extends Ui {
                 this.out.flush();
                 break;
             case Loose:
-                this.out.write(("--------- LOOSE ---------\n").getBytes(StandardCharsets.UTF_8));
+                this.out.write(("--------- LOSE ---------\n").getBytes(StandardCharsets.UTF_8));
                 this.out.flush();
                 this.out.write(("Appuyer sur ENTREE pour acceder au menu ! \n").getBytes(StandardCharsets.UTF_8));
                 this.out.flush();
