@@ -23,3 +23,9 @@ Le jar de l'application doit être mis dans : MOE/out/artifacts/MOE_jar\MOE.jar
 ###Execution
 
 Lancer le fichier start.bat (cf Prérequis), une invite de commande sera lancé et vous pourrez jouer au Mastermind.
+
+###Javadoc
+
+La Javadoc est disponible à l'adresse suivante :
+
+Mastermind.alexis-colonna.fr
