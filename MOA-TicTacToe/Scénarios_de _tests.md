@@ -133,3 +133,12 @@
 **Déroulement :** A la fin d'une partie, l'utilisateur souhaite quitter l'application
 
 **Résultat attendu :** L'application se ferme
+
+## Test de l'IA
+
+**But :** Vérifier le bon fonctionnement de l'IA
+
+**Déroulement :** Lancer la partie avec l'IA et poser le premier pion dans un coin 
+
+**Résultat attendu :** L'IA doit alors contrer en mettant son pion au milieu 
+
